@@ -13,6 +13,8 @@ import time
 from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
+from tools.forge.forge_mint_alfa import TELEMETRY_FILE  # type: ignore
+
 STATE_ROOT = Path(".toyfoundry")
 STATE_FILE = STATE_ROOT / "manufacturing_order_watcher_state.json"
 
@@ -98,6 +100,16 @@ def summarise_orders(orders: List[Tuple[Path, Dict]]) -> None:
         summary = payload.get("summary", "(no summary)")
         priority = payload.get("priority", "standard")
         print(f"  - {order_id} | priority={priority} | {summary}")
+        directives = payload.get("directives", [])
+        for directive in directives:
+            action = directive.get("action", "(no action)")
+            details = directive.get("details", "")
+            if "mint" in action or "forge" in action:
+                print("      · Ritual cue: python -m tools.forge.forge_mint_alfa --name <alfa-name> --dry-run")
+                print(f"      · Details: {details}")
+                print(f"      · Telemetry: {TELEMETRY_FILE}")
+            else:
+                print(f"      · {action}: {details}")
 
 
 def summarise_paths(title: str, paths: List[Path]) -> None:
