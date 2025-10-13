@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://toyfoundry.example/quilt.schema.json",
+  "title": "Toyfoundry Telemetry Quilt Rollup",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "name": { "type": "string" },
+      "dry_runs": { "type": "integer", "minimum": 0 },
+      "mint_runs": { "type": "integer", "minimum": 0 },
+      "latest_status": { "type": "string" },
+      "first_seen": { "type": "string", "format": "date-time" },
+      "last_seen": { "type": "string", "format": "date-time" },
+      "last_output_path": { "type": ["string", "null"] }
+    },
+    "required": [
+      "name",
+      "dry_runs",
+      "mint_runs",
+      "latest_status",
+      "first_seen",
+      "last_seen"
+    ],
+    "additionalProperties": true
+  }
+}

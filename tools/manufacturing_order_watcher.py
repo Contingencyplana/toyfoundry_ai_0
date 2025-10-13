@@ -104,10 +104,16 @@ def summarise_orders(orders: List[Tuple[Path, Dict]]) -> None:
         for directive in directives:
             action = directive.get("action", "(no action)")
             details = directive.get("details", "")
-            if "mint" in action or "forge" in action:
+            action_lower = action.lower()
+            details_lower = details.lower()
+            if "mint" in action_lower or "forge" in action_lower:
                 print("      · Ritual cue: python -m tools.forge.forge_mint_alfa --name <alfa-name> --dry-run")
                 print(f"      · Details: {details}")
                 print(f"      · Telemetry: {TELEMETRY_FILE}")
+            elif "quilt" in action_lower or "quilt" in details_lower:
+                print("      · Loom cue: python -m tools.telemetry.quilt_loom")
+                print(f"      · Details: {details}")
+                print("      · Output: .toyfoundry/telemetry/quilt/quilt_rollup.json")
             else:
                 print(f"      · {action}: {details}")
 

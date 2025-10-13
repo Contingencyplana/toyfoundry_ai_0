@@ -28,7 +28,7 @@ Establish the initial production posture for Toyfoundry following Order 2025-10-
 | Watcher Snapshot | `.toyfoundry/telemetry/exchange_watcher_state.json` | Last-seen exchange artefacts for traceability. |
 | Manufacturing Reports | `exchange/reports/*` | Aggregated outcomes per order or batch. |
 
-The telemetry quilt loom will ingest these feeds, stitch per-batch summaries (status, outcome, defects), and export daily dashboards for High Command.
+The telemetry quilt loom (`python -m tools.telemetry.quilt_loom`) ingests these feeds, stitches per-batch summaries (status, outcome, defects), and exports daily dashboards for High Command.
 
 ## 5. Automation Hooks
 
@@ -45,6 +45,6 @@ The telemetry quilt loom will ingest these feeds, stitch per-batch summaries (st
 
 ## 7. Next Steps
 
-1. Finalise telemetry quilt loom implementation (Order 2025-10-12-007).
+1. Run telemetry quilt loom rollups nightly and feed reports into Order 2025-10-12-007 follow-ups.
 2. Extend Forge adapters to hydrate manifests with recipe packs and push results to toysoldiers.
 3. Formalise promotion criteria and connect to doctrine archives for long-term storage.

@@ -18,3 +18,4 @@ All notable updates to the High Command AI workspace are documented here. Entrie
 
 - **Order 2025-10-12-005** — Delivered Forge ritual stubs (`forge_drill_alfa.py`, `forge_parade_alfa.py`, `forge_purge_alfa.py`, `forge_promote_alfa.py`) with shared telemetry logging and published `planning/toyfoundry/production_plan.md`.
 - **Exchange Automation** — Added `tools/exchange_watcher.py` and `tools/schema_validator.py` to keep Toyfoundry in sync with High Command orders and enforce JSON payload integrity.
+- **Telemetry Quilt Loom** — Stood up `.toyfoundry/telemetry/quilt/` scaffolding and `tools/telemetry/quilt_loom.py` to aggregate Alfa mint telemetry into a rollup for Order 2025-10-12-007.
