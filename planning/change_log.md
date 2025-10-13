@@ -13,3 +13,8 @@ All notable updates to the High Command AI workspace are documented here. Entrie
 - **Toyfoundry Governance Collateral** — Added root `LICENSE`, `CODE_OF_CONDUCT.md`, and `CONTRIBUTING.md` aligned with Toyfoundry’s manufacturing mission.
 - **Manufacturing Order Watcher** — Implemented `tools/manufacturing_order_watcher.py` to monitor the exchange submodule for Toyfoundry-targeted orders and outstanding acknowledgements.
 - **Forge Mint Ritual** — Added `tools/forge/forge_mint_alfa.py`, updated watcher integration, and recorded telemetry plumbing for Alfa mint dry-runs.
+
+## 2025-10-13
+
+- **Order 2025-10-12-005** — Delivered Forge ritual stubs (`forge_drill_alfa.py`, `forge_parade_alfa.py`, `forge_purge_alfa.py`, `forge_promote_alfa.py`) with shared telemetry logging and published `planning/toyfoundry/production_plan.md`.
+- **Exchange Automation** — Added `tools/exchange_watcher.py` and `tools/schema_validator.py` to keep Toyfoundry in sync with High Command orders and enforce JSON payload integrity.
