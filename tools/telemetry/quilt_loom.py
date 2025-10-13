@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import sys
 from collections import Counter
@@ -13,6 +14,7 @@ from tools.forge.forge_mint_alfa import TELEMETRY_FILE as MINT_TELEMETRY
 
 DEFAULT_OUTPUT = Path(".toyfoundry") / "telemetry" / "quilt" / "quilt_rollup.json"
 DEFAULT_COMPOSITE_OUTPUT = Path(".toyfoundry") / "telemetry" / "quilt" / "quilt_rollup_all.json"
+DEFAULT_EXPORT_DIR = Path(".toyfoundry") / "telemetry" / "quilt" / "exports"
 RITUAL_TELEMETRY = Path(".toyfoundry") / "telemetry" / "forge_rituals.jsonl"
 
 
@@ -45,6 +47,17 @@ def parse_args(argv: List[str] | None = None) -> argparse.Namespace:
         type=Path,
         default=DEFAULT_COMPOSITE_OUTPUT,
         help="Destination file for the composite rollup JSON.",
+    )
+    parser.add_argument(
+        "--export",
+        action="store_true",
+        help="Generate JSON and CSV exports from the composite rollup.",
+    )
+    parser.add_argument(
+        "--export-dir",
+        type=Path,
+        default=DEFAULT_EXPORT_DIR,
+        help="Directory where export artefacts are written when --export is supplied.",
     )
     return parser.parse_args(argv)
 
@@ -217,6 +230,102 @@ def write_rollup(rollup: Dict[str, Dict[str, Any]], output_path: Path) -> None:
         handle.write("\n")
 
 
+EXPORT_FIELDS = [
+    "operation_id",
+    "last_updated",
+    "mint_name",
+    "mint_first_seen",
+    "mint_last_seen",
+    "mint_latest_status",
+    "mint_dry_runs",
+    "mint_runs",
+    "ritual",
+    "ritual_total",
+    "ritual_completed",
+    "ritual_dry_runs",
+    "event_index",
+    "event_timestamp",
+    "event_status",
+    "event_dry_run",
+    "event_metadata",
+]
+
+
+def flatten_composite(composite_rollup: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
+    records: List[Dict[str, Any]] = []
+    for operation_id, data in composite_rollup.items():
+        mint = data.get("mint") or {}
+        base = {
+            "operation_id": operation_id,
+            "last_updated": data.get("last_updated"),
+            "mint_name": mint.get("name"),
+            "mint_first_seen": mint.get("first_seen"),
+            "mint_last_seen": mint.get("last_seen"),
+            "mint_latest_status": mint.get("latest_status"),
+            "mint_dry_runs": mint.get("dry_runs", 0),
+            "mint_runs": mint.get("mint_runs", 0),
+        }
+        rituals = data.get("rituals") or {}
+        events_added = False
+        for ritual_name in sorted(rituals):
+            ritual_data = rituals[ritual_name]
+            for index, event in enumerate(ritual_data.get("events", [])):
+                record = base.copy()
+                metadata = event.get("metadata") or {}
+                record.update(
+                    {
+                        "ritual": ritual_name,
+                        "ritual_total": ritual_data.get("total", 0),
+                        "ritual_completed": ritual_data.get("completed", 0),
+                        "ritual_dry_runs": ritual_data.get("dry_runs", 0),
+                        "event_index": index,
+                        "event_timestamp": event.get("timestamp"),
+                        "event_status": event.get("status"),
+                        "event_dry_run": bool(metadata.get("dry_run")),
+                        "event_metadata": metadata,
+                    }
+                )
+                records.append(record)
+                events_added = True
+        if not events_added:
+            record = base.copy()
+            record.update(
+                {
+                    "ritual": "",
+                    "ritual_total": 0,
+                    "ritual_completed": 0,
+                    "ritual_dry_runs": 0,
+                    "event_index": 0,
+                    "event_timestamp": None,
+                    "event_status": "",
+                    "event_dry_run": None,
+                    "event_metadata": {},
+                }
+            )
+            records.append(record)
+    return records
+
+
+def write_exports(records: List[Dict[str, Any]], export_dir: Path) -> Tuple[Path, Path]:
+    export_dir.mkdir(parents=True, exist_ok=True)
+    json_path = export_dir / "composite_export.json"
+    csv_path = export_dir / "composite_export.csv"
+
+    with json_path.open("w", encoding="utf-8") as handle:
+        json.dump(records, handle, indent=2, sort_keys=True)
+        handle.write("\n")
+
+    with csv_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=EXPORT_FIELDS)
+        writer.writeheader()
+        for record in records:
+            row = record.copy()
+            row["event_metadata"] = json.dumps(row["event_metadata"], sort_keys=True)
+            writer.writerow(row)
+
+    return json_path, csv_path
+
+
 def render_summary(
     mint_rollup: Dict[str, Dict[str, Any]],
     processed_mint: int,
@@ -224,6 +333,7 @@ def render_summary(
     processed_rituals: int,
     mint_output: Path,
     composite_output: Path,
+    export_paths: Tuple[Path, Path] | None,
 ) -> None:
     print(f"Processed {processed_mint} mint telemetry events across {len(mint_rollup)} alfa runs.")
     if not mint_rollup:
@@ -249,6 +359,12 @@ def render_summary(
             print(f"  - {ritual}: {count} operations")
     print(f"Composite quilt rollup written to {composite_output}")
 
+    if export_paths:
+        json_path, csv_path = export_paths
+        print("Exports written:")
+        print(f"  - JSON: {json_path}")
+        print(f"  - CSV: {csv_path}")
+
 
 def main(argv: List[str] | None = None) -> int:
     args = parse_args(argv)
@@ -261,6 +377,10 @@ def main(argv: List[str] | None = None) -> int:
 
         write_rollup(mint_rollup, args.output)
         write_rollup(composite_rollup, args.composite_output)
+        export_paths: Tuple[Path, Path] | None = None
+        if args.export:
+            records = flatten_composite(composite_rollup)
+            export_paths = write_exports(records, args.export_dir)
         render_summary(
             mint_rollup,
             processed_mint,
@@ -268,6 +388,7 @@ def main(argv: List[str] | None = None) -> int:
             processed_rituals,
             args.output,
             args.composite_output,
+            export_paths,
         )
         return 0
     except QuiltError as exc:

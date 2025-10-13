@@ -27,6 +27,7 @@ Establish the initial production posture for Toyfoundry following Order 2025-10-
 | Ritual Log | `.toyfoundry/telemetry/forge_rituals.jsonl` | Drill, Parade, Purge, Promote invocations with batch metadata. |
 | Watcher Snapshot | `.toyfoundry/telemetry/exchange_watcher_state.json` | Last-seen exchange artefacts for traceability. |
 | Composite Quilt | `.toyfoundry/telemetry/quilt/quilt_rollup_all.json` | Consolidated view of mint plus ritual telemetry for each Alfa operation. |
+| Composite Exports | `.toyfoundry/telemetry/quilt/exports/` | JSON/CSV datasets generated from the composite quilt for downstream ingestion. |
 | Manufacturing Reports | `exchange/reports/*` | Aggregated outcomes per order or batch. |
 
 The telemetry quilt loom (`python -m tools.telemetry.quilt_loom`) ingests these feeds, stitches per-batch summaries (status, outcome, defects), and exports daily dashboards for High Command.
@@ -46,6 +47,6 @@ The telemetry quilt loom (`python -m tools.telemetry.quilt_loom`) ingests these 
 
 ## 7. Next Steps
 
-1. Run mint and composite telemetry quilt loom rollups nightly and feed reports into Order 2025-10-12-008 follow-ups.
+1. Run mint/composite rollups nightly with exports (`python -m tools.telemetry.quilt_loom --export`) per Order 2025-10-12-009.
 2. Extend Forge adapters to hydrate manifests with recipe packs and push results to toysoldiers.
 3. Formalise promotion criteria and connect to doctrine archives for long-term storage.

@@ -9,6 +9,7 @@ folder are derived artefacts and may be regenerated at any time.
 - `composite_schema.json` — Schema fragment outlining the composite rollup that merges mint and ritual telemetry.
 - `quilt_rollup.json` — Latest loom output summarising Alfa mint telemetry.
 - `quilt_rollup_all.json` — Composite rollup combining mint, Drill, Parade, Purge, and Promote telemetry.
+- `exports/` — Machine-readable exports (JSON and CSV) generated for downstream consumers.
 
 ## Rollup Fields
 
@@ -32,3 +33,9 @@ reported `batch_id`. Each entry includes:
 
 Additional fields may be appended as the loom evolves. Downstream automation should
 handle additive expansion gracefully.
+
+## Exports
+
+The `exports/` directory contains flattened telemetry views regenerated with the loom's
+`--export` option. Refer to `planning/toyfoundry/telemetry/export_schema.md` for column
+definitions and consumer guidance.
