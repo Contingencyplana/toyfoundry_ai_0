@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://toyfoundry.example/quilt.composite.schema.json",
+  "title": "Toyfoundry Telemetry Composite Quilt Rollup",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object",
+    "properties": {
+      "mint": {
+        "type": ["object", "null"],
+        "properties": {
+          "name": { "type": "string" },
+          "dry_runs": { "type": "integer", "minimum": 0 },
+          "mint_runs": { "type": "integer", "minimum": 0 },
+          "latest_status": { "type": "string" },
+          "first_seen": { "type": "string", "format": "date-time" },
+          "last_seen": { "type": "string", "format": "date-time" },
+          "last_output_path": { "type": ["string", "null"] }
+        },
+        "required": [
+          "name",
+          "dry_runs",
+          "mint_runs",
+          "latest_status",
+          "first_seen",
+          "last_seen"
+        ],
+        "additionalProperties": true
+      },
+      "rituals": {
+        "type": "object",
+        "additionalProperties": {
+          "type": "object",
+          "properties": {
+            "total": { "type": "integer", "minimum": 0 },
+            "dry_runs": { "type": "integer", "minimum": 0 },
+            "completed": { "type": "integer", "minimum": 0 },
+            "events": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "timestamp": { "type": "string", "format": "date-time" },
+                  "status": { "type": "string" },
+                  "metadata": { "type": "object" }
+                },
+                "required": ["timestamp", "status"],
+                "additionalProperties": true
+              }
+            }
+          },
+          "required": ["total", "dry_runs", "completed", "events"],
+          "additionalProperties": true
+        }
+      },
+      "last_updated": { "type": "string", "format": "date-time" }
+    },
+    "required": ["rituals", "last_updated"],
+    "additionalProperties": true
+  }
+}

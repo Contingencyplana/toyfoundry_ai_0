@@ -15,6 +15,8 @@ from typing import Dict, Iterable, List, Tuple
 
 from tools.forge.forge_mint_alfa import TELEMETRY_FILE  # type: ignore
 
+QUILT_COMPOSITE_FILE = Path(".toyfoundry") / "telemetry" / "quilt" / "quilt_rollup_all.json"
+
 STATE_ROOT = Path(".toyfoundry")
 STATE_FILE = STATE_ROOT / "manufacturing_order_watcher_state.json"
 
@@ -113,7 +115,11 @@ def summarise_orders(orders: List[Tuple[Path, Dict]]) -> None:
             elif "quilt" in action_lower or "quilt" in details_lower:
                 print("      · Loom cue: python -m tools.telemetry.quilt_loom")
                 print(f"      · Details: {details}")
-                print("      · Output: .toyfoundry/telemetry/quilt/quilt_rollup.json")
+                print("      · Outputs:")
+                print("         · Mint rollup: .toyfoundry/telemetry/quilt/quilt_rollup.json")
+                print(f"         · Composite rollup: {QUILT_COMPOSITE_FILE}")
+                if "ritual" in details_lower or "ritual" in action_lower:
+                    print("      · Inputs: forge_mint_alfa.jsonl and forge_rituals.jsonl")
             else:
                 print(f"      · {action}: {details}")
 

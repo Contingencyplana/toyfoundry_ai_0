@@ -1,0 +1,84 @@
+{
+  "alfa-1760288351-47fe5f74": {
+    "last_updated": "2025-10-13T13:41:15.115199+00:00",
+    "mint": {
+      "dry_runs": 1,
+      "first_seen": "2025-10-12T16:59:11.307625+00:00",
+      "last_output_path": null,
+      "last_seen": "2025-10-12T16:59:11.307625+00:00",
+      "latest_status": "draft",
+      "mint_runs": 0,
+      "name": "order-2025-10-12-006-dryrun"
+    },
+    "rituals": {
+      "drill": {
+        "completed": 0,
+        "dry_runs": 1,
+        "events": [
+          {
+            "metadata": {
+              "batch_id": "alfa-1760288351-47fe5f74",
+              "dry_run": true,
+              "metrics": {},
+              "notes": "quilt integration dry run"
+            },
+            "status": "dry_run",
+            "timestamp": "2025-10-13T13:39:24.656237+00:00"
+          }
+        ],
+        "total": 1
+      },
+      "parade": {
+        "completed": 1,
+        "dry_runs": 0,
+        "events": [
+          {
+            "metadata": {
+              "batch_id": "alfa-1760288351-47fe5f74",
+              "display": "prototype display",
+              "dry_run": false,
+              "metrics": {}
+            },
+            "status": "completed",
+            "timestamp": "2025-10-13T13:40:42.085022+00:00"
+          }
+        ],
+        "total": 1
+      },
+      "promote": {
+        "completed": 1,
+        "dry_runs": 0,
+        "events": [
+          {
+            "metadata": {
+              "batch_id": "alfa-1760288351-47fe5f74",
+              "destination": "archives",
+              "dry_run": false,
+              "metrics": {}
+            },
+            "status": "completed",
+            "timestamp": "2025-10-13T13:41:15.115199+00:00"
+          }
+        ],
+        "total": 1
+      },
+      "purge": {
+        "completed": 0,
+        "dry_runs": 1,
+        "events": [
+          {
+            "metadata": {
+              "batch_id": "alfa-1760288351-47fe5f74",
+              "dry_run": true,
+              "metrics": {},
+              "reason": "prototype archived"
+            },
+            "status": "dry_run",
+            "timestamp": "2025-10-13T13:40:53.883710+00:00"
+          }
+        ],
+        "total": 1
+      }
+    }
+  }
+}

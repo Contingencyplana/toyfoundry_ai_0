@@ -5,8 +5,10 @@ folder are derived artefacts and may be regenerated at any time.
 
 ## Key Files
 
-- `schema.json` — Placeholder schema describing the quilt rollup structure.
+- `schema.json` — Placeholder schema describing the mint-only quilt rollup structure.
+- `composite_schema.json` — Schema fragment outlining the composite rollup that merges mint and ritual telemetry.
 - `quilt_rollup.json` — Latest loom output summarising Alfa mint telemetry.
+- `quilt_rollup_all.json` — Composite rollup combining mint, Drill, Parade, Purge, and Promote telemetry.
 
 ## Rollup Fields
 
@@ -20,5 +22,13 @@ contains:
 - `first_seen` / `last_seen` — ISO 8601 timestamps bracketing observed telemetry events.
 - `last_output_path` — Path to the most recent manifest output when available.
 
-Additional fields may be appended as new rituals feed the loom. Downstream automation
-should handle additive expansion gracefully.
+The composite rollup (`quilt_rollup_all.json`) is keyed by an operation identifier —
+for mint events this is the `alfa_id`, and for ritual telemetry it defaults to the
+reported `batch_id`. Each entry includes:
+
+- `mint` — Optional mint rollup matching the structure above when mint telemetry is available.
+- `rituals` — Nested objects per ritual (`drill`, `parade`, `purge`, `promote`) containing `events` (ordered chronologically) and aggregate counters (`total`, `dry_runs`, `completed`).
+- `last_updated` — ISO 8601 timestamp of the most recent event observed for that operation.
+
+Additional fields may be appended as the loom evolves. Downstream automation should
+handle additive expansion gracefully.

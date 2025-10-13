@@ -7,7 +7,7 @@ Automation that supports Toyfoundry’s manufacturing pipeline:
 - **Schema Validator (`schema_validator.py`)** – CLI check that ensures orders, acknowledgements, and reports include required keys. Designed for pre-commit or ad-hoc validation of JSON payloads.
 - **Forge Mint Alfa Ritual (`forge/forge_mint_alfa.py`)** – Generates Alfa manifests from recipes or ad-hoc parameters while emitting telemetry at `.toyfoundry/telemetry/forge_mint_alfa.jsonl`. Supports dry runs for validation or persistent manifest writes for production.
 - **Forge Ritual Stubs (`forge/forge_drill_alfa.py`, `forge/forge_parade_alfa.py`, `forge/forge_purge_alfa.py`, `forge/forge_promote_alfa.py`)** – Skeleton commands for the remaining Toyfoundry rituals that log telemetry to `.toyfoundry/telemetry/forge_rituals.jsonl` via `forge/ritual_logger.py`.
-- **Telemetry Quilt Loom (`telemetry/quilt_loom.py`)** – Aggregates mint telemetry into `.toyfoundry/telemetry/quilt/quilt_rollup.json` so High Command can inspect batch trends at a glance.
+- **Telemetry Quilt Loom (`telemetry/quilt_loom.py`)** – Aggregates mint telemetry into `.toyfoundry/telemetry/quilt/quilt_rollup.json` and merges Drill/Parade/Purge/Promote telemetry into `.toyfoundry/telemetry/quilt/quilt_rollup_all.json` for composite analysis.
 - **Forge Adapters** – _Planned._ Adapter scripts will translate manufacturing recipes into Forge-compatible manifests, attach safety rail validators, and emit batch telemetry in the factory format.
 - **Batch Telemetry Quilt** – _Planned._ Tooling to stitch together production metrics (entropy, emergence, release readiness) into dashboards for Parades and governance reviews.
 
@@ -33,6 +33,14 @@ Stitch the telemetry quilt:
 
 ```powershell
 python -m tools.telemetry.quilt_loom
+```
+
+Specify alternate telemetry feeds or outputs if needed:
+
+```powershell
+python -m tools.telemetry.quilt_loom --telemetry path/to/forge_mint_alfa.jsonl `
+    --ritual-telemetry path/to/forge_rituals.jsonl `
+    --output custom_rollup.json --composite-output custom_composite.json
 ```
 
 Run the exchange watcher once:
