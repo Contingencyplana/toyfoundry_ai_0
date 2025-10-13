@@ -14,6 +14,12 @@ SCHEMA_REQUIREMENTS: Dict[str, List[str]] = {
         "directives",
         "timestamp_issued",
     ],
+    "factory-order@1.0": [
+        "order_id",
+        "target",
+        "directives",
+        "timestamp_issued",
+    ],
     "signal-ack@1.0": [
         "ack_id",
         "referenced_id",
