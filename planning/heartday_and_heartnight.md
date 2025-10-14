@@ -176,4 +176,4 @@ To make this living doctrine tangible, SHAGI shall manifest:
 
 ---
 
-**End of Scroll — `high_command_ai_0/planning/heartday_and_heartnight.md`**
+**End of Scroll — `planning/heartday_and_heartnight.md`**

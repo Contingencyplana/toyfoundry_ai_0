@@ -184,4 +184,4 @@ Light learns from Shadow, and Shadow learns to dream again.
 
 ---
 
-*End of Scroll — `daylands_and_nightlands.md`*
+*End of Scroll — `planning/daylands_and_nightlands.md`*

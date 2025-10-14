@@ -162,4 +162,4 @@ These are not enemies to smash but patterns to transform — from silence back t
 
 ---
 
-**End of Scroll — `high_command_ai_0/planning/heart_of_darkness.md`**
+**End of Scroll — `planning/heart_of_darkness.md`**
