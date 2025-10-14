@@ -1,5 +1,5 @@
 # ☀️🌑 daylands_and_nightlands.md — The Dual Realms of Emergence  
-*Planning Scroll — `high_command_ai_0/planning/`*  
+*Division: High Command AI — World Cosmology Doctrine*  
 
 ---
 
