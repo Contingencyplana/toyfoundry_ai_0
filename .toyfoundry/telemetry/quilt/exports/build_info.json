@@ -15,6 +15,7 @@
     "composite_csv": ".toyfoundry\\telemetry\\quilt\\exports\\composite_export.csv",
     "sample_json": ".toyfoundry\\telemetry\\quilt\\exports\\samples\\composite_export.sample.json"
   },
+  "schema_version": "v1.0",
   "sizes_bytes": {
     "C:\\Users\\Admin\\toyfoundry_ai_0\\.toyfoundry\\telemetry\\quilt\\exports\\composite_export.csv": 1614,
     "C:\\Users\\Admin\\toyfoundry_ai_0\\.toyfoundry\\telemetry\\quilt\\exports\\composite_export.json": 3121,
