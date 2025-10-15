@@ -1,16 +1,16 @@
-# 🛰️ command_exchange_protocol.md — High Command & Toyfoundry Signal Network
+# ≡ƒ¢░∩╕Å command_exchange_protocol.md ΓÇö High Command & Toyfoundry Signal Network
 
-*Doctrine Scroll — `high_command_ai_0/planning/`*
+*Doctrine Scroll ΓÇö `high_command_ai_0/planning/`*
 
 ---
 
-## 🌍 Purpose
+## ≡ƒîì Purpose
 
 Codifies the shared communications substrate that links High Command (`high_command_ai_0`), Toyfoundry manufacturing workspaces (`toyfoundry_ai_*`), and all field workspaces (e.g., `toysoldiers_ai_*`). Defines directory structure, message lifecycles, and JSON schemas so every order, report, and acknowledgement remains traceable, auditable, and production-ready.
 
 ---
 
-## 🛠️ 1. Transport Layer
+## ≡ƒ¢á∩╕Å 1. Transport Layer
 
 | Layer | Current Implementation | Upgrade Path | Notes |
 |-------|------------------------|--------------|-------|
@@ -23,18 +23,18 @@ Codifies the shared communications substrate that links High Command (`high_comm
 
 ```plaintext
 exchange/
- ├─ orders/
- │   ├─ pending/
- │   └─ dispatched/
- ├─ reports/
- │   ├─ inbox/
- │   └─ archived/
- ├─ acknowledgements/
- │   ├─ pending/
- │   └─ logged/
- └─ ledger/
-     ├─ journal.md
-     └─ index.json
+ Γö£ΓöÇ orders/
+ Γöé   Γö£ΓöÇ pending/
+ Γöé   ΓööΓöÇ dispatched/
+ Γö£ΓöÇ reports/
+ Γöé   Γö£ΓöÇ inbox/
+ Γöé   ΓööΓöÇ archived/
+ Γö£ΓöÇ acknowledgements/
+ Γöé   Γö£ΓöÇ pending/
+ Γöé   ΓööΓöÇ logged/
+ ΓööΓöÇ ledger/
+     Γö£ΓöÇ journal.md
+     ΓööΓöÇ index.json
 ```
 
 - `orders/` holds outbound directives from High Command.
@@ -42,11 +42,11 @@ exchange/
 - `acknowledgements/` tracks delivery confirmations to prevent silent loops.
 - `ledger/` keeps a rolling human-auditable summary and machine index.
 
-📌 *Version Control:* The `exchange/` directory is initialized as its own git repository so it can be promoted to the shared `high_command_exchange` submodule. Each workspace — doctrine, manufacturing, or field — should add a remote and synchronize this repo independently of the doctrine codebase.
+≡ƒôî *Version Control:* The `exchange/` directory is initialized as its own git repository so it can be promoted to the shared `high_command_exchange` submodule. Each workspace ΓÇö doctrine, manufacturing, or field ΓÇö should add a remote and synchronize this repo independently of the doctrine codebase.
 
 ---
 
-## 🧾 2. Message Schemas
+## ≡ƒº╛ 2. Message Schemas
 
 All payloads are versioned JSON documents encoded in UTF-8, newline-terminated. Keys use `snake_case`. Timestamps are ISO 8601 UTC.
 
@@ -135,23 +135,23 @@ Valid `status` values: `received`, `in-progress`, `completed`, `declined`.
 
 ---
 
-## 🔄 3. Message Lifecycle
+## ≡ƒöä 3. Message Lifecycle
 
-1. **Draft** — High Command composes JSON order with unique `order_id` targeting Toyfoundry or field recipients.
-2. **Commit** — Order placed in `orders/pending/` and committed to exchange repo.
-3. **Sync** — Field workspace pulls exchange repo, reads new orders.
-4. **Acknowledge** — Field posts `signal-ack@1.0`; order moves to `dispatched/`.
-5. **Execute** — Manufacturing or field unit carries out directives, logs artifacts.
-6. **Report** — Manufacturing units submit production telemetry (`field-report@1.0` or factory variant) and field units return deployment feedback; High Command reviews and moves report to `reports/archived/`.
-7. **Close-Out** — High Command issues closure note in `ledger/journal.md` and updates `ledger/index.json`.
+1. **Draft** ΓÇö High Command composes JSON order with unique `order_id` targeting Toyfoundry or field recipients.
+2. **Commit** ΓÇö Order placed in `orders/pending/` and committed to exchange repo.
+3. **Sync** ΓÇö Field workspace pulls exchange repo, reads new orders.
+4. **Acknowledge** ΓÇö Field posts `signal-ack@1.0`; order moves to `dispatched/`.
+5. **Execute** ΓÇö Manufacturing or field unit carries out directives, logs artifacts.
+6. **Report** ΓÇö Manufacturing units submit production telemetry (`field-report@1.0` or factory variant) and field units return deployment feedback; High Command reviews and moves report to `reports/archived/`.
+7. **Close-Out** ΓÇö High Command issues closure note in `ledger/journal.md` and updates `ledger/index.json`.
 
-📡 *Automation Hook:* Field workspaces should run `python -m tools.exchange_watcher --watch` (or equivalent scheduling) so new orders, pending acknowledgements, and inbox reports surface immediately without manual polling.
+≡ƒôí *Automation Hook:* Field workspaces should run `python -m tools.exchange_watcher --watch` (or equivalent scheduling) so new orders, pending acknowledgements, and inbox reports surface immediately without manual polling.
 
 Every state transition must leave a git commit trail for full auditability.
 
 ---
 
-## 📚 4. Indexing & Retrieval
+## ≡ƒôÜ 4. Indexing & Retrieval
 
 `ledger/index.json` contains a compact manifest for fast lookups:
 
@@ -179,18 +179,18 @@ Automation scripts should regenerate the index after each sync to guarantee refe
 
 ---
 
-## 🛡️ 5. Governance
+## ≡ƒ¢í∩╕Å 5. Governance
 
 - **Unique IDs:** All message IDs are deterministic: `type-YYYY-MM-DD-###`.
 - **Time Discipline:** Clocks sync via UTC; drift beyond 5 seconds triggers warning.
 - **Human Checkpoint:** Orders with `priority = urgent` require human sign-off recorded in `ledger/journal.md`.
 - **Retention:** Reports stay in `archived/` indefinitely; attachments may be pruned via rolling hash audit after 90 days.
 - **Encryption (Future):** When secrets emerge, encapsulate attachments with workspace-specific keys and store only fingerprints in the exchange repo.
-- **Governance Collateral:** Every workspace interacting with the exchange must surface `LICENSE`, `CODE_OF_CONDUCT.md`, and `CONTRIBUTING.md` aligned with High Command’s templates; include links in `exchange/README.md`.
+- **Governance Collateral:** Every workspace interacting with the exchange must surface `LICENSE`, `CODE_OF_CONDUCT.md`, and `CONTRIBUTING.md` aligned with High CommandΓÇÖs templates; include links in `exchange/README.md`.
 
 ---
 
-## � 6. Automation Aides
+## ∩┐╜ 6. Automation Aides
 
 - **Exchange Watcher (`tools/exchange_watcher.py`):** Polls the exchange tree, tracks the last-seen snapshot, and prints new orders, pending acknowledgements, and inbox reports. Supports one-shot checks or continuous monitoring via `--watch`.
 - **Schema Validator (`tools/schema_validator.py`):** Validates payloads against canonical schemas prior to commit; integrate into CI or pre-commit flows.
@@ -198,10 +198,24 @@ Automation scripts should regenerate the index after each sync to guarantee refe
 
 ---
 
-## 🚀 7. Immediate Tasks
+## ≡ƒÜÇ 7. Immediate Tasks
 
-1. **Deploy exchange watcher scheduling** — Embed the watcher in each manufacturing and field workspace (cron, scheduled task, or daemon) so operators receive near-real-time order prompts.
-2. **Maintain governance parity** — Whenever doctrine evolves (licenses, conduct, contribution flow), issue orders to downstream workspaces and log completion in the ledger.
-3. **Plan Toyfoundry integration** — Define manufacturing pipeline requirements and map how Toyfoundry will consume exchange directives, report production telemetry, and ship certified batches to toysoldiers.
+1. **Deploy exchange watcher scheduling** ΓÇö Embed the watcher in each manufacturing and field workspace (cron, scheduled task, or daemon) so operators receive near-real-time order prompts.
+2. **Maintain governance parity** ΓÇö Whenever doctrine evolves (licenses, conduct, contribution flow), issue orders to downstream workspaces and log completion in the ledger.
+3. **Plan Toyfoundry integration** ΓÇö Define manufacturing pipeline requirements and map how Toyfoundry will consume exchange directives, report production telemetry, and ship certified batches to toysoldiers.
 
 With these actions, High Command and field theatres operate from a shared doctrine, automated alerting, and evolving strategic roadmap.
+
+---
+
+## See Also
+
+- Daylands Charter and Safety Checklist: `planning/daylands_and_nightlands.md:1`
+- In-Game Pipeline and Gates: `planning/internal_alfa_architecture.md:2`
+- AI Agents and Safety: `planning/ai_agents_and_safety.md:1`
+- Safety Gate Template: `planning/templates/safety_gate_template.md:1`
+- Change-as-Order Templates:
+  - Order: `exchange/orders/templates/change-order.template.json:1`
+  - Acknowledgement: `exchange/acknowledgements/templates/change-ack.template.json:1`
+  - Report: `exchange/reports/templates/change-report.template.json:1`
+- Lanes Config Sample: `tools/telemetry/canary_sandbox.sample.json:1`

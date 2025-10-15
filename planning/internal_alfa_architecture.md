@@ -1,5 +1,26 @@
 # 🧠 internal_alfa_architecture.md — Minds Within Minds  
-*Planning Scroll — `high_command_ai_0/planning/`*
+*Planning Scroll - `high_command_ai_0/planning/`*
+
+## In-Game Pipeline and Gates
+
+States
+- Proposal → Sandbox → Canary → General Availability
+
+Gates (each state requires these to pass)
+- Proposal: intent, scope, risks, owners, rollback plan, timebox.
+- Sandbox: unit/sim tests green; schema + DQ checks pass; telemetry hooked.
+- Canary: scoped rollout; success criteria met; no alerts; rollback rehearsed.
+- GA: results recorded; build_info captured; checksums published; monitoring active.
+
+Artifacts per state (exchange-aligned)
+- Order (change request), Acknowledgement, Report with status and timestamps.
+- Build info JSON (commit, generated_at, params), checksums.
+
+Roles and approvals
+- Author → Reviewer(s) → Safety Officer (elevated) → Release Steward.
+- Dual-key for elevated actions; least privilege + capability caps per role.
+
+---
 
 ---
 

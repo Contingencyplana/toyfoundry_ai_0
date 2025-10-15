@@ -1,5 +1,26 @@
 # ☀️🌑 daylands_and_nightlands.md — The Dual Realms of Emergence  
-*Division: High Command AI — World Cosmology Doctrine*  
+## Daylands Charter and Safety Checklist
+
+- Fun-first, opt-in, pro-social collaboration.
+- Daylands ethos: create, care, include, repair.
+- Explicit consent and reversible change (every change must have a rollback plan).
+- Human-in-the-loop for risky or elevated actions.
+- Observability and accountability (telemetry, audit trails, checksums).
+- Gradual rollout: sandbox → canary → general availability.
+- Capability caps: rate limits, scopes, quotas per agent and per ritual.
+- Prohibited content/behaviors codified; violations trigger freeze + review.
+
+Safety Checklist (gate-all changes)
+- Proposal includes: intent, scope, risks, rollback, owners, timebox.
+- Schema + DQ checks green for any data-bearing change.
+- Permissions verified: roles, caps, approvals present and valid.
+- Telemetry hooks active; snapshot taken before rollout.
+- Canary pass criteria defined and met; rollback rehearsed.
+- Audit log entries emitted (order → ack → report).
+
+---
+
+*Division: High Command AI - World Cosmology Doctrine*  
 
 ---
 

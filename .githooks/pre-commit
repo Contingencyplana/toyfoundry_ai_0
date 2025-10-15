@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Allow opt-out
+if [[ "${SKIP_TEMPLATE_VALIDATION:-}" == "1" ]]; then
+  echo "[pre-commit] SKIP_TEMPLATE_VALIDATION=1 set; skipping template checks" >&2
+  exit 0
+fi
+
+# Run the PowerShell template validator
+if command -v pwsh >/dev/null 2>&1; then
+  pwsh -NoProfile -File tools/ci/validate_templates.ps1
+elif command -v powershell >/dev/null 2>&1; then
+  powershell -NoProfile -File tools/ci/validate_templates.ps1
+else
+  echo "[pre-commit] No PowerShell runtime (pwsh/powershell) found to run tools/ci/validate_templates.ps1" >&2
+  exit 1
+fi
+

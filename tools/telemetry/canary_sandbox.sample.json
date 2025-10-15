@@ -1,0 +1,17 @@
+{
+  "schema": "telemetry-lanes@1.0",
+  "generated_at": "<ISO8601>",
+  "lanes": [
+    { "name": "sandbox", "retention_days": 7, "sampling": 1.0, "notes": "isolated shard; no external effects" },
+    { "name": "canary", "retention_days": 30, "sampling": 0.1, "notes": "limited audience; rollback rehearsed" }
+  ],
+  "telemetry": {
+    "export_paths": {
+      "json": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
+      "csv": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
+      "build_info": ".toyfoundry/telemetry/quilt/exports/build_info.json"
+    },
+    "checks": ["schema_version", "dq_non_empty", "dq_units_positive", "dq_duration_range"]
+  }
+}
+
