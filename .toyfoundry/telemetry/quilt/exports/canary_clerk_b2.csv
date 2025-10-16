@@ -1,0 +1,4 @@
+operation,status,units,duration_ms,timestamp,batch
+forge_mint_alfa,success,1,600,2025-10-16T05:31:47.8460730Z,b2
+forge_drill_alfa,success,1,700,2025-10-16T05:31:47.8460730Z,b2
+
