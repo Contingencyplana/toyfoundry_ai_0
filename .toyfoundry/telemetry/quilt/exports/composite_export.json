@@ -1,98 +1,16 @@
 [
   {
-    "event_dry_run": true,
-    "event_index": 0,
-    "event_metadata": {
-      "batch_id": "alfa-1760288351-47fe5f74",
-      "dry_run": true,
-      "metrics": {},
-      "notes": "quilt integration dry run"
-    },
-    "event_status": "dry_run",
-    "event_timestamp": "2025-10-13T13:39:24.656237+00:00",
-    "last_updated": "2025-10-13T13:41:15.115199+00:00",
-    "mint_dry_runs": 1,
-    "mint_first_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_last_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_latest_status": "draft",
-    "mint_name": "order-2025-10-12-006-dryrun",
-    "mint_runs": 0,
-    "operation_id": "alfa-1760288351-47fe5f74",
-    "ritual": "drill",
-    "ritual_completed": 0,
-    "ritual_dry_runs": 1,
-    "ritual_total": 1
+    "operation": "forge_mint_alfa",
+    "status": "success",
+    "duration_ms": 1200,
+    "units": 2,
+    "timestamp": "2025-10-16T04:54:50.8442309Z"
   },
   {
-    "event_dry_run": false,
-    "event_index": 0,
-    "event_metadata": {
-      "batch_id": "alfa-1760288351-47fe5f74",
-      "display": "prototype display",
-      "dry_run": false,
-      "metrics": {}
-    },
-    "event_status": "completed",
-    "event_timestamp": "2025-10-13T13:40:42.085022+00:00",
-    "last_updated": "2025-10-13T13:41:15.115199+00:00",
-    "mint_dry_runs": 1,
-    "mint_first_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_last_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_latest_status": "draft",
-    "mint_name": "order-2025-10-12-006-dryrun",
-    "mint_runs": 0,
-    "operation_id": "alfa-1760288351-47fe5f74",
-    "ritual": "parade",
-    "ritual_completed": 1,
-    "ritual_dry_runs": 0,
-    "ritual_total": 1
-  },
-  {
-    "event_dry_run": false,
-    "event_index": 0,
-    "event_metadata": {
-      "batch_id": "alfa-1760288351-47fe5f74",
-      "destination": "archives",
-      "dry_run": false,
-      "metrics": {}
-    },
-    "event_status": "completed",
-    "event_timestamp": "2025-10-13T13:41:15.115199+00:00",
-    "last_updated": "2025-10-13T13:41:15.115199+00:00",
-    "mint_dry_runs": 1,
-    "mint_first_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_last_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_latest_status": "draft",
-    "mint_name": "order-2025-10-12-006-dryrun",
-    "mint_runs": 0,
-    "operation_id": "alfa-1760288351-47fe5f74",
-    "ritual": "promote",
-    "ritual_completed": 1,
-    "ritual_dry_runs": 0,
-    "ritual_total": 1
-  },
-  {
-    "event_dry_run": true,
-    "event_index": 0,
-    "event_metadata": {
-      "batch_id": "alfa-1760288351-47fe5f74",
-      "dry_run": true,
-      "metrics": {},
-      "reason": "prototype archived"
-    },
-    "event_status": "dry_run",
-    "event_timestamp": "2025-10-13T13:40:53.883710+00:00",
-    "last_updated": "2025-10-13T13:41:15.115199+00:00",
-    "mint_dry_runs": 1,
-    "mint_first_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_last_seen": "2025-10-12T16:59:11.307625+00:00",
-    "mint_latest_status": "draft",
-    "mint_name": "order-2025-10-12-006-dryrun",
-    "mint_runs": 0,
-    "operation_id": "alfa-1760288351-47fe5f74",
-    "ritual": "purge",
-    "ritual_completed": 0,
-    "ritual_dry_runs": 1,
-    "ritual_total": 1
+    "operation": "forge_drill_alfa",
+    "status": "success",
+    "duration_ms": 800,
+    "units": 1,
+    "timestamp": "2025-10-16T04:54:50.8442309Z"
   }
 ]
