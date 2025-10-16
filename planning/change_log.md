@@ -20,4 +20,9 @@ All notable updates to the High Command AI workspace are documented here. Entrie
 - **Exchange Automation** — Added `tools/exchange_watcher.py` and `tools/schema_validator.py` to keep Toyfoundry in sync with High Command orders and enforce JSON payload integrity.
 - **Telemetry Quilt Loom** — Stood up `.toyfoundry/telemetry/quilt/` scaffolding and `tools/telemetry/quilt_loom.py` to aggregate Alfa mint telemetry into a rollup for Order 2025-10-12-007.
 - **Order 2025-10-12-008** — Expanded the telemetry quilt loom to ingest Drill/Parade/Purge/Promote streams, emit composite rollups, and documented the new schema fragments.
-- **Order 2025-10-12-009** — Added export schema documentation, automated JSON/CSV exports via the quilt loom, and published sample artefacts under `.toyfoundry/telemetry/quilt/exports/`.
+- **Order 2025-10-12-009** - Added export schema documentation, automated JSON/CSV exports via the quilt loom, and published sample artefacts under `.toyfoundry/telemetry/quilt/exports/`.
+
+## 2025-10-16
+
+- **AI R&D Doctrine** — Added `planning/ai_research_and_development.md` with R&D operating model, Quickstart, and export paths aligned to quilt loom outputs.
+- **AI Labscapes & Labs Guide** — Added/updated `planning/ai_labscapes_and_ai_labs.md` with lifecycle, Quickstart, and normalized separators (Alfa -> Juliett; Hypothesis -> Archive).
