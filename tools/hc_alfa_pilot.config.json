@@ -1,0 +1,14 @@
+{
+  "allowed_paths": [
+    "exchange/**",
+    "planning/briefings/**",
+    "logs/hc_alfa/**",
+    "tools/hc_alfa/**",
+    "tools/hc_alfa_pilot.config.json"
+  ],
+  "max_mutations_per_run": 20,
+  "rate_limit_s": 5,
+  "lockfile": "logs/hc_alfa/pilot.lock",
+  "dry_run": true
+}
+

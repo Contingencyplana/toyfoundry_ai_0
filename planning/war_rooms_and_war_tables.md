@@ -57,7 +57,7 @@ Their combined deliberations shape the *voice of High Command*.
    Officers vote, influence, or fuse their findings.
 
 4. **Consensus Phase**  
-   If consensus ≥ threshold, results are compiled into `order.json` or `doctrine_update.json`.
+   If consensus >= threshold, results are compiled into `order.json` or `doctrine_update.json`.
 
 5. **Output Phase**  
    Orders are dispatched to the relevant theatre via `high_command_ai_0/orders/`.
@@ -139,3 +139,6 @@ Each archetype may evolve new sub-types as the system gains depth.
 ---
 
 *End of Scroll — `war_rooms_and_war_tables.md`*
+
+
+
