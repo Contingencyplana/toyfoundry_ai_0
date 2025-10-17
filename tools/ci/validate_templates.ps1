@@ -21,7 +21,7 @@ function Test-JsonFile($path, $requiredKeys) {
 # Validate change-as-order templates
 Test-JsonFile 'exchange/orders/templates/change-order.template.json' @('schema','order_id','issued_by','target','directives')
 Test-JsonFile 'exchange/acknowledgements/templates/change-ack.template.json' @('schema','ack_id','referenced_id','status')
-Test-JsonFile 'exchange/reports/templates/change-report.template.json' @('schema','report_id','referenced_order','pipeline','safety')
+Test-JsonFile 'exchange/reports/templates/change-report.template.json' @('schema','report_id','order_id','reported_by','status')
 
 # Validate lanes config
 try {
