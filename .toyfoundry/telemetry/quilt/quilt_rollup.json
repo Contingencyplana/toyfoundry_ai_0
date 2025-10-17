@@ -79,5 +79,68 @@
     "latest_status": "minted",
     "mint_runs": 1,
     "name": "order020_alfa_8"
+  },
+  "alfa-1760721354-6132f38c": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:15:54.065198+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721354-6132f38c.json",
+    "last_seen": "2025-10-17T17:15:54.065198+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_c1_alfa_01"
+  },
+  "alfa-1760721382-0cc23c9b": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:16:22.913951+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721382-0cc23c9b.json",
+    "last_seen": "2025-10-17T17:16:22.913951+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_c1_alfa_02"
+  },
+  "alfa-1760721390-3e474718": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:16:30.579688+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721390-3e474718.json",
+    "last_seen": "2025-10-17T17:16:30.579688+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_c1_alfa_03"
+  },
+  "alfa-1760721470-19d09f09": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:17:50.641650+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721470-19d09f09.json",
+    "last_seen": "2025-10-17T17:17:50.641650+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_b1_alfa_01"
+  },
+  "alfa-1760721475-3e07cfb0": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:17:55.941982+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721475-3e07cfb0.json",
+    "last_seen": "2025-10-17T17:17:55.941982+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_b1_alfa_02"
+  },
+  "alfa-1760721497-696d48bb": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:18:17.522785+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721497-696d48bb.json",
+    "last_seen": "2025-10-17T17:18:17.522785+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_b2_alfa_01"
+  },
+  "alfa-1760721502-3d89c5b5": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T17:18:22.289195+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760721502-3d89c5b5.json",
+    "last_seen": "2025-10-17T17:18:22.289195+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "canary_batch_b2_alfa_02"
   }
 }
