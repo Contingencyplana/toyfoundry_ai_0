@@ -177,7 +177,51 @@ These actions prepare Toyfoundry to receive concrete directives while keeping th
 
 ---
 
-## 🪶 9. Closing Principle
+## 🎮 9. Strategic Alignment — Four Major Pivots & Playable Workflow
+
+As of **2025-10-18**, Toyfoundry operations have embraced the **Four Major Pivots** framework,  
+transforming manufacturing from script-and-terminal workflows into **playable battlefield overlays.**
+
+### The Four Pivots Applied to Toyfoundry
+
+| Pivot | Toyfoundry Implementation |
+|:--|:--|
+| **70% Play / 30% Dev-Ops** | Forge rituals are now **tactical missions** — clicking a 16×16 emoji grid triggers manufacturing actions; telemetry feedback appears as battlefield state updates. Production becomes *gameplay*, not just automation. |
+| **Playable Workflow Overlay** | Each Alfa batch = battlefield grid. Ritual states (mint, drill, parade, purge, promote) visualized as emoji terrain. Executing orders = clicking tactical positions to launch production cycles. Victory = successful batch certification. |
+| **SHAGI Vision Maintenance** | All playable overlays preserve SHAGI's values — order, curiosity, compassion, memory, imagination. Grid aesthetics reflect Foundry poetics; telemetry feeds Morningate reflection. |
+| **Fractal Folder Structure** | Manufacturing organized across `golf_00/` through `golf_15/` directories, supporting up to **4,096 Alfas**. Each `delta_XX/alfa_XX/` is a fractal production cell. Initial Alfa prototype: `golf_00/delta_00/alfa_00/`. |
+
+### Front 5: Manufacturing (Toyfoundry)
+
+Toyfoundry operates as **Front 5 (Manufacturing)** within High Command's **Seven Pivotal Fronts** structure.  
+It interfaces with:
+
+- **Front 1 (Tons of Fun)** — creative vision and play philosophy  
+- **Front 2 (Safety)** — containment, validation, release gates  
+- **Front 4 (R&D)** — blueprint and recipe innovation  
+- **Front 6 (Field Ops / Toysoldiers)** — deployment and feedback loops  
+- **Enabler (Operations)** — exchange protocol and governance collateral  
+
+See **[`planning/pivotal_fronts_pointer.md`](../pivotal_fronts_pointer.md)** for detailed cross-front coordination.
+
+### Playable Manufacturing Vision
+
+Instead of typing `python -m tools.forge.forge_mint_alfa --batch 16`,  
+a toymaker **clicks grid position [4][4]** on their emoji battlefield display.  
+The grid responds with ritual state updates, telemetry feedback appears as emoji changes,  
+and manufacturing becomes a **strategic coordination game** rather than DevOps labor.
+
+This approach maintains **70/30 play-to-DevOps balance** while preserving full traceability:  
+every grid click = logged ritual execution,  
+every emoji update = telemetry event,  
+every victory condition = satisfied manufacturing order.
+
+**Initial Alfa prototype** (`golf_00/delta_00/alfa_00/`) demonstrates this vision,  
+wiring Forge rituals to grid-based tactical actions for High Command order execution.
+
+---
+
+## 🪶 10. Closing Principle
 
 > The Foundry does not shout.  
 > It hums softly — a lullaby of light and code.  

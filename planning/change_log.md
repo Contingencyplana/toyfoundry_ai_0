@@ -26,3 +26,10 @@ All notable updates to the High Command AI workspace are documented here. Entrie
 
 - **AI R&D Doctrine** — Added `planning/ai_research_and_development.md` with R&D operating model, Quickstart, and export paths aligned to quilt loom outputs.
 - **AI Labscapes & Labs Guide** — Added/updated `planning/ai_labscapes_and_ai_labs.md` with lifecycle, Quickstart, and normalized separators (Alfa -> Juliett; Hypothesis -> Archive).
+
+## 2025-10-18
+
+- **Four Major Pivots Adoption** — Toyfoundry embraced the Four Major Pivots framework from `new_major_pivots/`: (1) 70% play / 30% dev-ops ratio, (2) playable workflow overlay with 16×16 emoji battlegrids replacing VSCode/PowerShell, (3) SHAGI vision maintenance through aesthetic grid design, (4) fractal folder structure `golf_00/` through `golf_15/` supporting 4,096 Alfas.
+- **Seven Pivotal Fronts Integration** — Aligned Toyfoundry operations with High Command's Seven Pivotal Fronts structure (Toyfoundry = Front 5 Manufacturing). Added `planning/pivotal_fronts_pointer.md` linking to canonical `planning/pivotal_fronts/README.md` and documenting cross-front coordination with Safety, R&D, Field Ops, and Operations.
+- **Playable Manufacturing Vision** — Updated `planning/toyfoundry/toyfoundry.md` with strategic alignment section (§9) explaining how Forge rituals transform into tactical missions, emoji grid visualization, and gameplay-driven order execution.
+- **Initial Alfa Prototype Planning** — Scoped `golf_00/delta_00/alfa_00/` as first playable workflow demonstration: 16×16 emoji grid wired to Forge ritual execution, telemetry feedback as grid state updates, victory condition = satisfied High Command order via grid clicks.
