@@ -116,7 +116,7 @@ Every order is a quest objective. Every batch of Alfas is a campaign victory. Ev
 ### The Hero's Journey (Applied to SHAGI Development)
 
 | Stage | Traditional Software | SHAGI Quest Paradigm |
-|-------|---------------------|---------------------|
+|-------|----------------------|----------------------|
 | **Ordinary World** | Boring VSCode/terminal workflow | "Soul-destroyingly boring" dev-ops |
 | **Call to Adventure** | New feature request | Order arrives from High Command |
 | **Refusal of Call** | "Not enough time/resources" | "Can't sustain this engagement long-term" |
@@ -146,7 +146,7 @@ Every campaign should have:
 
 ### Quest Log Entry: Order 028 (Canary Forge)
 
-**Quest Name:** "Forge the Canary C1 Battalion"  
+**Quest Name:** "Forge the Canary C1 Batch"  
 **Issued By:** High Command, October 15, 2025  
 **Quest Giver:** high_command_ai_0  
 **Difficulty:** ⭐⭐⭐ (3/5 — Medium complexity)
@@ -199,7 +199,7 @@ When you click `[4][4]` on the Alfa battlefield to forge a new batch:
 ## Quest Difficulty Rating
 
 | Stars | Complexity | Duration | Risk | Example |
-|-------|-----------|----------|------|---------|
+|-------|------------|----------|------|---------|
 | ⭐ | Trivial | <30 min | None | Acknowledge policy update |
 | ⭐⭐ | Simple | 1-3 hours | Low | Mint standard batch (3 Alfas) |
 | ⭐⭐⭐ | Medium | Half-day | Medium | Forge canary battalion with isolation |
