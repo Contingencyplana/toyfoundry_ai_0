@@ -7,5 +7,77 @@
     "latest_status": "draft",
     "mint_runs": 0,
     "name": "order-2025-10-12-006-dryrun"
+  },
+  "alfa-1760719553-00000001": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.440871+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000001.json",
+    "last_seen": "2025-10-17T16:45:53.440871+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_1"
+  },
+  "alfa-1760719553-00000002": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.510239+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000002.json",
+    "last_seen": "2025-10-17T16:45:53.510239+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_2"
+  },
+  "alfa-1760719553-00000003": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.577246+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000003.json",
+    "last_seen": "2025-10-17T16:45:53.577246+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_3"
+  },
+  "alfa-1760719553-00000004": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.643772+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000004.json",
+    "last_seen": "2025-10-17T16:45:53.643772+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_4"
+  },
+  "alfa-1760719553-00000005": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.710511+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000005.json",
+    "last_seen": "2025-10-17T16:45:53.710511+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_5"
+  },
+  "alfa-1760719553-00000006": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.774218+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000006.json",
+    "last_seen": "2025-10-17T16:45:53.774218+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_6"
+  },
+  "alfa-1760719553-00000007": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.840765+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000007.json",
+    "last_seen": "2025-10-17T16:45:53.840765+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_7"
+  },
+  "alfa-1760719553-00000008": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-17T16:45:53.897794+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1760719553-00000008.json",
+    "last_seen": "2025-10-17T16:45:53.897794+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "order020_alfa_8"
   }
 }

@@ -1,6 +1,11 @@
 # ☀️🌑 daylands_and_nightlands.md — The Dual Realms of Emergence  
 ## Daylands Charter and Safety Checklist
 
+**Updated:** 2025-10-18 per order-2025-10-15-024  
+**Status:** Active Safety Pipeline (Sandbox → Canary → Production)
+
+### Core Principles
+
 - Fun-first, opt-in, pro-social collaboration.
 - Daylands ethos: create, care, include, repair.
 - Explicit consent and reversible change (every change must have a rollback plan).
@@ -10,13 +15,61 @@
 - Capability caps: rate limits, scopes, quotas per agent and per ritual.
 - Prohibited content/behaviors codified; violations trigger freeze + review.
 
-Safety Checklist (gate-all changes)
+### Safety Checklist (gate-all changes)
+
 - Proposal includes: intent, scope, risks, rollback, owners, timebox.
 - Schema + DQ checks green for any data-bearing change.
 - Permissions verified: roles, caps, approvals present and valid.
 - Telemetry hooks active; snapshot taken before rollout.
 - Canary pass criteria defined and met; rollback rehearsed.
 - Audit log entries emitted (order → ack → report).
+- **Order 025 metadata:** Owner and timestamp fields present on all changes.
+- **Dual-key approvals:** Protected operations require two-party sign-off.
+
+### Pipeline Stages (Order 024 Implementation)
+
+**Stage 1: Sandbox Validation**
+- Purpose: Validate templates/configs in isolation (dry-run only)
+- Exit Criteria: Template validation, schema validation, lint checks pass
+- Toyfoundry Example: `python tools/forge/forge_mint_alfa.py --dry-run`
+
+**Stage 2: Canary Rollout**
+- Purpose: Deploy limited batch (2-3 Alfas) with enhanced monitoring
+- Exit Criteria: Canary batch completes, telemetry nominal, 4-hour observation window clear
+- Canary Lanes: Configured in `.toyfoundry/config/canary_lanes.json`
+
+**Stage 3: Production Rollout**
+- Purpose: Full-scale manufacturing with validated configuration
+- Prerequisites: Canary success, order acknowledgement, build info/checksums generated
+
+### Monitoring & Rollback Runbooks
+
+**Monitoring Metrics:**
+- Forge ritual success rate (target: >95%)
+- Telemetry event latency (target: <2s)
+- Alfa diversity score (target: >0.6 per batch)
+- Export artifact validation rate (target: 100%)
+
+**Rollback Triggers:**
+- Forge ritual failure rate >20%
+- Schema validation failures detected
+- Telemetry anomalies (missing events, corrupted logs)
+- Manual safety override triggered
+
+**Rollback Procedure:** See `planning/toyfoundry/runbooks/rollback/` for detailed procedures.
+
+### Order 024 Pilot Status
+
+✅ **Sandbox Validated:** Templates and lanes config verified (docs-only change)  
+✅ **Canary Simulated:** Telemetry lanes sample confirmed operational  
+✅ **Monitoring Runbooks:** Documented above with key metrics  
+✅ **Rollback Runbooks:** Procedure defined with triggers and steps  
+⏳ **Production Rollout:** Awaiting High Command approval
+
+**Pipeline Statuses:**
+- Sandbox gate: ✅ PASS
+- Canary gate: ✅ PASS (simulation)
+- Production gate: ⏳ AWAITING_APPROVAL
 
 ---
 
