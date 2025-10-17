@@ -63,6 +63,7 @@ This index orients work across all pivotal fronts and links to canon documents. 
 - **Ledger:** `exchange/ledger/` — Order lifecycle tracking
 
 ### Playable Workflow Overlay (New)
+- **Everything At Once Meta-Pivot:** `new_major_pivots/everything_at_once.md` — Core paradigm: simultaneous game/work/story reality
 - **Four Major Pivots:** `new_major_pivots/README.md`
 - **Alfa Zero Spec:** `docs/alfa_zero_spec.md`
 - **Fractal Structure:** `golf_00/` through `golf_15/` (4,096 Alfas)
