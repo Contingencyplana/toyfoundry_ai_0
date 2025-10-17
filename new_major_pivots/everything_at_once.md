@@ -146,18 +146,18 @@ When you click `[4][4]` (Forge Mint), you experience:
 ### **The Profound Truth:**
 
 ```
-┌─────────────────────────────────────────────┐
-│                                             │
-│    "Did I just mint 8 Alfas...              │
-│     or did I just defeat 8 enemies...       │
-│     or did I just complete Chapter 3...     │
-│     or did I just execute a workflow...     │
-│     or did I just contribute to the war...  │
-│     or did I just add a patch to the quilt?"│
-│                                             │
-│              ALL OF THEM. 🌟                │
-│                                             │
-└─────────────────────────────────────────────┘
+┌──────────────────────────────────────────────┐
+│                                              │
+│    "Did I just mint 8 Alfas...               │
+│     or did I just defeat 8 enemies...        │
+│     or did I just complete Chapter 3...      │
+│     or did I just execute a workflow...      │
+│     or did I just contribute to the war...   │
+│     or did I just add a patch to the quilt?" │
+│                                              │
+│              ALL OF THEM. 🌟                 │
+│                                              │
+└──────────────────────────────────────────────┘
 ```
 
 **These are not metaphors. They are literal simultaneous realities.**
@@ -256,7 +256,7 @@ Like a **hologram**: Rotate it and you see different aspects, but it's one unifi
 
 ## 🎯 Practical Example: Order 028 Execution
 
-When you executed Order 028 (Canary Alfa Batches), you experienced:
+When the President executed Order 028 (Canary Alfa Batches), the President experienced:
 
 | Dimension | What Happened |
 |:----------|:--------------|
