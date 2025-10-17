@@ -186,6 +186,8 @@ The **Four Major Pivots** represent a fundamental shift in how we build **Nightl
 | `new_major_pivot_2.md` | Playable Workflow Overlay architecture |
 | `new_major_pivot_3.md` | Big Ideas & SHAGI Vision alignment |
 | `new_major_pivot_4.md` | Fractal Folder Structure (golf_00-15) design |
+| `everything_at_once.md` | Meta-pivot: Simultaneous game/work/story/workflow/quilt/theatre reality |
+| `grand_adventures_and_mighty_quests.md` | Quest paradigm: Orders as adventures, campaigns as sagas |
 | `README.md` | This document (overview & integration) |
 
 **Related documents:**
