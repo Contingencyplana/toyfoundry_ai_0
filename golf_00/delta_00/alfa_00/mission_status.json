@@ -1,0 +1,134 @@
+{
+  "timestamp": "2025-10-17T16:31:02.830686Z",
+  "orders": {
+    "order-2025-10-15-020": {
+      "summary": "Standard batch run with limits",
+      "priority": "high",
+      "expires": "2025-10-19T00:00:00Z",
+      "status": "IN_PROGRESS",
+      "victory": {
+        "order_id": "order-2025-10-15-020",
+        "satisfied": 2,
+        "total": 3,
+        "complete": false,
+        "conditions": [
+          {
+            "description": "Composite export JSON generated",
+            "satisfied": true,
+            "details": "File found: .toyfoundry/telemetry/quilt/exports/composite_export.json"
+          },
+          {
+            "description": "Composite export CSV generated",
+            "satisfied": true,
+            "details": "File found: .toyfoundry/telemetry/quilt/exports/composite_export.csv"
+          },
+          {
+            "description": "Minted batch with max_alfa_per_batch=8",
+            "satisfied": false,
+            "details": "Forge mint execution check pending"
+          }
+        ]
+      }
+    },
+    "order-2025-10-15-024": {
+      "summary": "Daylands safety pipeline pilot",
+      "priority": "normal",
+      "expires": "2025-10-22T00:00:00Z",
+      "status": "IN_PROGRESS",
+      "victory": {
+        "order_id": "order-2025-10-15-024",
+        "satisfied": 0,
+        "total": 2,
+        "complete": false,
+        "conditions": [
+          {
+            "description": "Daylands charter documented",
+            "satisfied": false,
+            "details": "docs_updated check requires manual verification"
+          },
+          {
+            "description": "Templates and lanes config validated",
+            "satisfied": false,
+            "details": "sandbox_validated check requires manual verification"
+          }
+        ]
+      }
+    },
+    "order-2025-10-15-026": {
+      "summary": "Pivotal fronts pointer",
+      "priority": "standard",
+      "expires": "2025-10-22T00:00:00Z",
+      "status": "COMPLETED",
+      "victory": {
+        "order_id": "order-2025-10-15-026",
+        "status": "COMPLETED",
+        "satisfied": 1,
+        "total": 1,
+        "complete": true
+      }
+    },
+    "order-2025-10-15-028": {
+      "summary": "Canary Alfa batches with exports",
+      "priority": "high",
+      "expires": "2025-10-22T00:00:00Z",
+      "status": "IN_PROGRESS",
+      "victory": {
+        "order_id": "order-2025-10-15-028",
+        "satisfied": 1,
+        "total": 3,
+        "complete": false,
+        "conditions": [
+          {
+            "description": "Minted 2-3 canary batches",
+            "satisfied": false,
+            "details": "Forge mint execution check pending"
+          },
+          {
+            "description": "Canary exports generated",
+            "satisfied": true,
+            "details": "All files present"
+          },
+          {
+            "description": "SHA256 checksums generated",
+            "satisfied": false,
+            "details": "checksum_files check requires manual verification"
+          }
+        ]
+      }
+    },
+    "order-2025-10-15-030": {
+      "summary": "Expand canary with 2 additional batches",
+      "priority": "high",
+      "expires": "2025-10-23T00:00:00Z",
+      "status": "IN_PROGRESS",
+      "victory": {
+        "order_id": "order-2025-10-15-030",
+        "satisfied": 4,
+        "total": 4,
+        "complete": true,
+        "conditions": [
+          {
+            "description": "Canary batch B1 generated",
+            "satisfied": true,
+            "details": "File found: .toyfoundry/telemetry/quilt/exports/canary_batch_b1.json"
+          },
+          {
+            "description": "Canary batch B1 CSV generated",
+            "satisfied": true,
+            "details": "File found: .toyfoundry/telemetry/quilt/exports/canary_batch_b1.csv"
+          },
+          {
+            "description": "Canary batch B2 generated",
+            "satisfied": true,
+            "details": "File found: .toyfoundry/telemetry/quilt/exports/canary_batch_b2.json"
+          },
+          {
+            "description": "Canary batch B2 CSV generated",
+            "satisfied": true,
+            "details": "File found: .toyfoundry/telemetry/quilt/exports/canary_batch_b2.csv"
+          }
+        ]
+      }
+    }
+  }
+}
