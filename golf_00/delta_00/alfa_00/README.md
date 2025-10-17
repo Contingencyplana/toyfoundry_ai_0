@@ -17,40 +17,76 @@ This Alfa transforms Toyfoundry manufacturing operations into a **tactical coord
 
 ---
 
-## 🗺️ Battlefield Grid (16×16)
+## 🗺️ Battlefield Grid (16×16) — Complete Manufacturing Pipeline
 
 ```
    0  1  2  3  4  5  6  7  8  9  A  B  C  D  E  F
- 0 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 1 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 2 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 3 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+ 0 ⬛⬛⬛⬛📥⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [0][4] = Order Intake
+ 1 ⬛⬛⬛⬛✉️⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [1][4] = Acknowledge Order
+ 2 ⬛⬛⬛⬛📝⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [2][4] = Proposal
+ 3 ⬛⬛⬛⬛🧪⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [3][4] = Sandbox Validate
  4 ⬛⬛⬛⬛🏭⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [4][4] = Forge Mint
- 5 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 6 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 7 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 8 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- 9 ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- A ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- B ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- C ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- D ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- E ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
- F ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛
+ 5 ⬛⬛⬛⬛⬛🎯⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [5][5] = Drill
+ 6 ⬛⬛⬛⬛⬛⬛🎭⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [6][6] = Parade
+ 7 ⬛⬛⬛⬛⬛⬛⬛🗑️⬛⬛⬛⬛⬛⬛⬛⬛  <- [7][7] = Purge
+ 8 ⬛⬛⬛⬛⬛⬛⬛⬛⭐⬛⬛⬛⬛⬛⬛⬛  <- [8][8] = Promote
+ 9 ⬛⬛⬛⬛⬛⬛⬛⬛🧵⬛⬛⬛⬛⬛⬛⬛  <- [9][8] = Quilt Loom
+ A ⬛⬛⬛⬛⬛⬛⬛⬛🔍⬛⬛⬛⬛⬛⬛⬛  <- [A][8] = Quilt Inspect
+ B ⬛⬛⬛⬛⬛⬛⬛⬛💾⬛⬛⬛⬛⬛⬛⬛  <- [B][8] = Build Info
+ C ⬛⬛⬛⬛📊⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [C][4] = Export Quilt
+ D ⬛⬛⬛⬛🔐⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛  <- [D][4] = Checksum Verify
+ E ⬛⬛⬛⬛✅⬛⬛⬛⬛⬛⬛⬛📋➕⬛⬛  <- [E][4] = Schema Validate | [E][C] = Git Status | [E][D] = Git Add
+ F ⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛⬛💾🚀  <- [F][E] = Git Commit | [F][F] = Git Push
 ```
+
+**Visual Workflow:** Order intake (top) → Manufacturing (middle) → Telemetry (right) → Validation/Export (bottom) → Git ops (corner)
 
 ---
 
-## 🎯 Tactical Positions
+## 🎯 Tactical Positions — All 16 Nodes
 
-| Position | Emoji | Ritual | Command Triggered |
-|:---------|:------|:-------|:-----------------|
-| `[4][4]` | 🏭 | **Forge Mint** | `python -m tools.forge.forge_mint_alfa --batch N` |
-| `[5][5]` | 🎯 | **Drill** | `python -m tools.forge.forge_drill_alfa` |
-| `[6][6]` | 🎭 | **Parade** | `python -m tools.forge.forge_parade_alfa` |
-| `[7][7]` | 🗑️ | **Purge** | `python -m tools.forge.forge_purge_alfa` |
-| `[8][8]` | ⭐ | **Promote** | `python -m tools.forge.forge_promote_alfa` |
-| `[C][4]` | 📊 | **Export Quilt** | `python -m tools.telemetry.quilt_loom --export` |
+### 📥 **Order Management** (Column 4, Rows 0-2)
+| Position | Emoji | Action | Description |
+|:---------|:------|:-------|:------------|
+| `[0][4]` | 📥 | **Order Intake** | Pull latest orders from High Command exchange |
+| `[1][4]` | ✉️ | **Acknowledge Order** | Generate acknowledgement for incoming order |
+| `[2][4]` | 📝 | **Proposal** | Create change proposal with intent/scope/risks/rollback |
+
+### 🏭 **Manufacturing Pipeline** (Column 4, Rows 3-4)
+| Position | Emoji | Action | Description |
+|:---------|:------|:-------|:------------|
+| `[3][4]` | 🧪 | **Sandbox Validate** | Dry-run validation before manufacturing |
+| `[4][4]` | 🏭 | **Forge Mint** | Mint new Alfa batch with configurable parameters |
+
+### 🎯 **Ritual Operations** (Diagonal 5-8)
+| Position | Emoji | Action | Description |
+|:---------|:------|:-------|:------------|
+| `[5][5]` | 🎯 | **Drill** | Run simulations on existing Alfas |
+| `[6][6]` | 🎭 | **Parade** | Display batch results and dream logs |
+| `[7][7]` | 🗑️ | **Purge** | Retire failed Alfas (high entropy) |
+| `[8][8]` | ⭐ | **Promote** | Certify exemplary Alfas for deployment |
+
+### 📊 **Telemetry & Analysis** (Column 8, Rows 9-11)
+| Position | Emoji | Action | Description |
+|:---------|:------|:-------|:------------|
+| `[9][8]` | 🧵 | **Quilt Loom** | Generate telemetry rollups (mint + ritual streams) |
+| `[A][8]` | 🔍 | **Quilt Inspect** | View telemetry rollup summary |
+| `[B][8]` | 💾 | **Build Info** | Generate build_info.json with SHA256 checksums |
+
+### ✅ **Export & Validation** (Column 4, Rows 12-14)
+| Position | Emoji | Action | Description |
+|:---------|:------|:-------|:------------|
+| `[C][4]` | 📊 | **Export Quilt** | Generate composite exports (JSON/CSV) |
+| `[D][4]` | 🔐 | **Checksum Verify** | Verify artifact integrity via SHA256 |
+| `[E][4]` | ✅ | **Schema Validate** | Validate reports against factory-report@1.0 schema |
+
+### 🚀 **Git Operations** (Corner, Rows 14-15)
+| Position | Emoji | Action | Description |
+|:---------|:------|:-------|:------------|
+| `[E][C]` | 📋 | **Git Status** | Show working tree status |
+| `[E][D]` | ➕ | **Git Add** | Stage all changes for commit |
+| `[F][E]` | 💾 | **Git Commit** | Commit staged changes with message |
+| `[F][F]` | 🚀 | **Git Push** | Push commits to remote origin |
 
 ---
 

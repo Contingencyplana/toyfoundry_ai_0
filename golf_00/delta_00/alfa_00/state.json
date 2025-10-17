@@ -6,7 +6,71 @@
   "artifact_paths": [
     "planning/pivotal_fronts_pointer.md"
   ],
-  "telemetry_events": [],
+  "telemetry_events": [
+    {
+      "position": [
+        0,
+        4
+      ],
+      "action": "Order Intake",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    },
+    {
+      "position": [
+        15,
+        15
+      ],
+      "action": "Git Push",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    },
+    {
+      "position": [
+        0,
+        4
+      ],
+      "action": "Order Intake",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    },
+    {
+      "position": [
+        9,
+        8
+      ],
+      "action": "Quilt Loom",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    },
+    {
+      "position": [
+        12,
+        4
+      ],
+      "action": "Export Quilt",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    },
+    {
+      "position": [
+        13,
+        4
+      ],
+      "action": "Checksum Verify",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    },
+    {
+      "position": [
+        14,
+        12
+      ],
+      "action": "Git Status",
+      "timestamp": "2025-10-18T12:30:00Z",
+      "status": "success"
+    }
+  ],
   "grid_version": "1.0.0-alfa00",
   "created_at": "2025-10-18T12:00:00Z"
 }

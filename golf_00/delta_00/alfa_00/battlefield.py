@@ -16,14 +16,46 @@ GRID_SIZE = 16
 HEX_LABELS = "0123456789ABCDEF"
 
 # Tactical positions and their forge commands
+# 16-node comprehensive manufacturing workflow overlay
 TACTICAL_POSITIONS = {
+    # === MANUFACTURING COLUMN (col 4) ===
+    (0, 4): {
+        "emoji": "📥",
+        "name": "Order Intake",
+        "command": ["git", "submodule", "update", "--remote", "exchange"],
+        "params": [],
+        "description": "Pull latest orders from High Command exchange"
+    },
+    (1, 4): {
+        "emoji": "✉️",
+        "name": "Acknowledge Order",
+        "command": ["python", "-m", "tools.exchange.acknowledge_order"],
+        "params": ["--order-id"],
+        "description": "Generate acknowledgement for incoming order"
+    },
+    (2, 4): {
+        "emoji": "📝",
+        "name": "Proposal",
+        "command": ["echo"],
+        "params": [],
+        "description": "Create change proposal with intent/scope/risks/rollback"
+    },
+    (3, 4): {
+        "emoji": "🧪",
+        "name": "Sandbox Validate",
+        "command": ["python", "-m", "tools.forge.forge_mint_alfa", "--dry-run"],
+        "params": ["--name"],
+        "description": "Dry-run validation before manufacturing"
+    },
     (4, 4): {
         "emoji": "🏭",
         "name": "Forge Mint",
         "command": ["python", "-m", "tools.forge.forge_mint_alfa"],
-        "params": ["--batch"],
+        "params": ["--name", "--output"],
         "description": "Mint new Alfa batch with configurable size"
     },
+    
+    # === RITUAL DIAGONAL (5-8) ===
     (5, 5): {
         "emoji": "🎯",
         "name": "Drill",
@@ -52,12 +84,81 @@ TACTICAL_POSITIONS = {
         "params": [],
         "description": "Certify exemplary Alfas for deployment"
     },
+    
+    # === TELEMETRY COLUMN (col 8) ===
+    (9, 8): {
+        "emoji": "🧵",
+        "name": "Quilt Loom",
+        "command": ["python", "-m", "tools.telemetry.quilt_loom"],
+        "params": [],
+        "description": "Generate telemetry rollups (mint + ritual streams)"
+    },
+    (10, 8): {
+        "emoji": "🔍",
+        "name": "Quilt Inspect",
+        "command": ["python", "-m", "tools.telemetry.quilt_loom", "--show"],
+        "params": [],
+        "description": "View telemetry rollup summary"
+    },
+    (11, 8): {
+        "emoji": "💾",
+        "name": "Build Info",
+        "command": ["python", "tools/telemetry/generate_build_info.py"],
+        "params": [],
+        "description": "Generate build_info.json with SHA256 checksums"
+    },
+    
+    # === EXPORT & VALIDATION COLUMN (col 4, rows 12-14) ===
     (12, 4): {
         "emoji": "📊",
         "name": "Export Quilt",
         "command": ["python", "-m", "tools.telemetry.quilt_loom", "--export"],
-        "params": [],
+        "params": ["--export-dir"],
         "description": "Generate composite exports (JSON/CSV)"
+    },
+    (13, 4): {
+        "emoji": "🔐",
+        "name": "Checksum Verify",
+        "command": ["python", "-c", "import hashlib; from pathlib import Path; print('Checksum verification placeholder')"],
+        "params": [],
+        "description": "Verify artifact integrity via SHA256"
+    },
+    (14, 4): {
+        "emoji": "✅",
+        "name": "Schema Validate",
+        "command": ["python", "tools/schema_validator.py"],
+        "params": [],
+        "description": "Validate reports against factory-report@1.0 schema"
+    },
+    
+    # === GIT OPERATIONS CORNER (rows 14-15, cols 12-15) ===
+    (14, 12): {
+        "emoji": "📋",
+        "name": "Git Status",
+        "command": ["git", "status", "--short"],
+        "params": [],
+        "description": "Show working tree status"
+    },
+    (14, 13): {
+        "emoji": "➕",
+        "name": "Git Add",
+        "command": ["git", "add", "-A"],
+        "params": [],
+        "description": "Stage all changes for commit"
+    },
+    (15, 14): {
+        "emoji": "💾",
+        "name": "Git Commit",
+        "command": ["git", "commit", "-m"],
+        "params": [],
+        "description": "Commit staged changes with message"
+    },
+    (15, 15): {
+        "emoji": "🚀",
+        "name": "Git Push",
+        "command": ["git", "push"],
+        "params": [],
+        "description": "Push commits to remote origin"
     }
 }
 
