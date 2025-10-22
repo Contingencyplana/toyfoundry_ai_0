@@ -3,10 +3,11 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 import sys
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Tuple
 
@@ -16,6 +17,32 @@ DEFAULT_OUTPUT = Path(".toyfoundry") / "telemetry" / "quilt" / "quilt_rollup.jso
 DEFAULT_COMPOSITE_OUTPUT = Path(".toyfoundry") / "telemetry" / "quilt" / "quilt_rollup_all.json"
 DEFAULT_EXPORT_DIR = Path(".toyfoundry") / "telemetry" / "quilt" / "exports"
 RITUAL_TELEMETRY = Path(".toyfoundry") / "telemetry" / "forge_rituals.jsonl"
+
+SCHEMA_VERSION = "1.0"
+MAX_DURATION_MS = 300_000
+RITUAL_ALIASES = {
+    "drill": "forge",
+    "forge": "forge",
+}
+VALID_RITUALS = {"forge", "parade", "purge", "promote"}
+EVENT_STATUS_MAP = {
+    "completed": "success",
+    "success": "success",
+    "succeeded": "success",
+    "failed": "failure",
+    "failure": "failure",
+    "error": "failure",
+    "dry_run": "partial",
+    "partial": "partial",
+    "unknown": "partial",
+}
+MINT_STATUS_MAP = {
+    "minted": "success",
+    "draft": "partial",
+    "failed": "failure",
+    "failure": "failure",
+    "error": "failure",
+}
 
 
 class QuiltError(RuntimeError):
@@ -231,82 +258,194 @@ def write_rollup(rollup: Dict[str, Dict[str, Any]], output_path: Path) -> None:
 
 
 EXPORT_FIELDS = [
-    "operation_id",
-    "last_updated",
-    "mint_name",
-    "mint_first_seen",
-    "mint_last_seen",
-    "mint_latest_status",
-    "mint_dry_runs",
-    "mint_runs",
+    "schema_version",
+    "batch_id",
     "ritual",
-    "ritual_total",
-    "ritual_completed",
-    "ritual_dry_runs",
-    "event_index",
-    "event_timestamp",
-    "event_status",
-    "event_dry_run",
-    "event_metadata",
+    "units_processed",
+    "status",
+    "duration_ms",
 ]
+
+
+def normalise_status(raw_status: Any, mapping: Dict[str, str], default: str = "partial") -> str:
+    if raw_status is None:
+        return default
+    key = str(raw_status).strip().lower()
+    return mapping.get(key, default)
+
+
+def normalise_ritual(raw_ritual: Any) -> str:
+    if raw_ritual is None:
+        return "forge"
+    key = str(raw_ritual).strip().lower()
+    canonical = RITUAL_ALIASES.get(key, key)
+    if canonical not in VALID_RITUALS:
+        return "forge"
+    return canonical
+
+
+def extract_units(metadata: Dict[str, Any], fallback: int = 1) -> int:
+    candidates = [
+        metadata.get("units_processed"),
+        metadata.get("units"),
+        metadata.get("count"),
+    ]
+    metrics = metadata.get("metrics") if isinstance(metadata.get("metrics"), dict) else {}
+    candidates.extend([metrics.get("units_processed"), metrics.get("units"), metrics.get("count")])
+    for candidate in candidates:
+        if candidate is None:
+            continue
+        try:
+            value = int(candidate)
+        except (TypeError, ValueError):
+            continue
+        if value > 0:
+            return value
+    return max(1, fallback)
+
+
+def extract_duration(metadata: Dict[str, Any]) -> int:
+    candidates = [
+        metadata.get("duration_ms"),
+        metadata.get("duration"),
+    ]
+    metrics = metadata.get("metrics") if isinstance(metadata.get("metrics"), dict) else {}
+    candidates.extend([metrics.get("duration_ms"), metrics.get("duration"), metrics.get("durationMillis")])
+    for candidate in candidates:
+        if candidate is None:
+            continue
+        try:
+            value = int(candidate)
+        except (TypeError, ValueError):
+            continue
+        if value < 0:
+            value = 0
+        if value > MAX_DURATION_MS:
+            value = MAX_DURATION_MS
+        return value
+    return 0
 
 
 def flatten_composite(composite_rollup: Dict[str, Dict[str, Any]]) -> List[Dict[str, Any]]:
     records: List[Dict[str, Any]] = []
-    for operation_id, data in composite_rollup.items():
+    for operation_id, data in sorted(composite_rollup.items()):
         mint = data.get("mint") or {}
-        base = {
-            "operation_id": operation_id,
-            "last_updated": data.get("last_updated"),
-            "mint_name": mint.get("name"),
-            "mint_first_seen": mint.get("first_seen"),
-            "mint_last_seen": mint.get("last_seen"),
-            "mint_latest_status": mint.get("latest_status"),
-            "mint_dry_runs": mint.get("dry_runs", 0),
-            "mint_runs": mint.get("mint_runs", 0),
-        }
         rituals = data.get("rituals") or {}
-        events_added = False
-        for ritual_name in sorted(rituals):
-            ritual_data = rituals[ritual_name]
-            for index, event in enumerate(ritual_data.get("events", [])):
-                record = base.copy()
+        events_emitted = False
+
+        for ritual_name, ritual_data in sorted(rituals.items()):
+            events = ritual_data.get("events") or []
+            if not events:
+                continue
+            normalised_ritual = normalise_ritual(ritual_name)
+            for event in events:
                 metadata = event.get("metadata") or {}
-                record.update(
-                    {
-                        "ritual": ritual_name,
-                        "ritual_total": ritual_data.get("total", 0),
-                        "ritual_completed": ritual_data.get("completed", 0),
-                        "ritual_dry_runs": ritual_data.get("dry_runs", 0),
-                        "event_index": index,
-                        "event_timestamp": event.get("timestamp"),
-                        "event_status": event.get("status"),
-                        "event_dry_run": bool(metadata.get("dry_run")),
-                        "event_metadata": metadata,
-                    }
-                )
-                records.append(record)
-                events_added = True
-        if not events_added:
-            record = base.copy()
-            record.update(
-                {
-                    "ritual": "",
-                    "ritual_total": 0,
-                    "ritual_completed": 0,
-                    "ritual_dry_runs": 0,
-                    "event_index": 0,
-                    "event_timestamp": None,
-                    "event_status": "",
-                    "event_dry_run": None,
-                    "event_metadata": {},
+                batch_id = str(metadata.get("batch_id") or operation_id)
+                units_processed = extract_units(metadata)
+                duration_ms = extract_duration(metadata)
+                status = normalise_status(event.get("status"), EVENT_STATUS_MAP)
+                if metadata.get("dry_run"):
+                    status = "partial"
+                record = {
+                    "schema_version": SCHEMA_VERSION,
+                    "batch_id": batch_id,
+                    "ritual": normalised_ritual,
+                    "units_processed": units_processed,
+                    "status": status,
+                    "duration_ms": duration_ms,
                 }
-            )
+                records.append(record)
+                events_emitted = True
+
+        if not events_emitted:
+            # Preserve batches that have only mint telemetry by emitting a synthetic forge record.
+            batch_id = str(operation_id)
+            status = normalise_status(mint.get("latest_status"), MINT_STATUS_MAP, default="partial")
+            units_processed = mint.get("mint_runs", 0)
+            try:
+                units_processed_int = int(units_processed)
+            except (TypeError, ValueError):
+                units_processed_int = 0
+            record = {
+                "schema_version": SCHEMA_VERSION,
+                "batch_id": batch_id,
+                "ritual": "forge",
+                "units_processed": max(1, units_processed_int or 1),
+                "status": status,
+                "duration_ms": 0,
+            }
             records.append(record)
+
+    records.sort(key=lambda item: (item["batch_id"], item["ritual"], item["status"]))
     return records
 
 
-def write_exports(records: List[Dict[str, Any]], export_dir: Path) -> Tuple[Path, Path]:
+def write_checksum(artifact_path: Path) -> str:
+    digest = hashlib.sha256(artifact_path.read_bytes()).hexdigest().upper()
+    checksum_path = artifact_path.with_suffix(artifact_path.suffix + ".sha256")
+    checksum_path.parent.mkdir(parents=True, exist_ok=True)
+    with checksum_path.open("w", encoding="ascii") as handle:
+        handle.write("\nHash\n----\n")
+        handle.write(digest)
+        handle.write("\n")
+    return digest
+
+
+def update_metadata_checksums(export_dir: Path, checksums: Dict[str, str]) -> None:
+    timestamp = (
+        datetime.now(timezone.utc)
+        .replace(microsecond=0)
+        .isoformat()
+        .replace("+00:00", "Z")
+    )
+
+    manifest_path = export_dir / "export_manifest.json"
+    if manifest_path.exists():
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+        manifest["generated_at"] = timestamp
+
+        artifacts_block = manifest.get("artifacts")
+        if isinstance(artifacts_block, list):
+            for artifact in artifacts_block:
+                filename = artifact.get("filename") if isinstance(artifact, dict) else None
+                if filename and filename in checksums:
+                    artifact["sha256"] = checksums[filename]
+
+        checksum_block = manifest.get("checksums")
+        if isinstance(checksum_block, dict):
+            for filename, digest in checksums.items():
+                if filename in checksum_block:
+                    checksum_block[filename] = digest
+
+        manifest_path.write_text(
+            json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+
+    build_info_path = export_dir / "build_info.json"
+    if build_info_path.exists():
+        build_info = json.loads(build_info_path.read_text(encoding="utf-8"))
+        build_info["timestamp"] = timestamp
+
+        artifacts_block = build_info.get("artifacts")
+        if isinstance(artifacts_block, list):
+            for artifact in artifacts_block:
+                path_str = artifact.get("path") if isinstance(artifact, dict) else None
+                filename = Path(path_str).name if path_str else None
+                if filename and filename in checksums:
+                    artifact["sha256"] = checksums[filename]
+        elif isinstance(artifacts_block, dict):
+            for filename, digest in checksums.items():
+                if filename in artifacts_block:
+                    artifacts_block[filename] = digest
+
+        build_info_path.write_text(
+            json.dumps(build_info, indent=2, sort_keys=True) + "\n",
+            encoding="utf-8",
+        )
+
+
+def write_exports(records: List[Dict[str, Any]], export_dir: Path) -> Tuple[Path, Path, Dict[str, str]]:
     export_dir.mkdir(parents=True, exist_ok=True)
     json_path = export_dir / "composite_export.json"
     csv_path = export_dir / "composite_export.csv"
@@ -319,11 +458,15 @@ def write_exports(records: List[Dict[str, Any]], export_dir: Path) -> Tuple[Path
         writer = csv.DictWriter(handle, fieldnames=EXPORT_FIELDS)
         writer.writeheader()
         for record in records:
-            row = record.copy()
-            row["event_metadata"] = json.dumps(row["event_metadata"], sort_keys=True)
-            writer.writerow(row)
+            writer.writerow(record)
 
-    return json_path, csv_path
+    checksums = {
+        json_path.name: write_checksum(json_path),
+        csv_path.name: write_checksum(csv_path),
+    }
+    update_metadata_checksums(export_dir, checksums)
+
+    return json_path, csv_path, checksums
 
 
 def render_summary(
@@ -380,7 +523,8 @@ def main(argv: List[str] | None = None) -> int:
         export_paths: Tuple[Path, Path] | None = None
         if args.export:
             records = flatten_composite(composite_rollup)
-            export_paths = write_exports(records, args.export_dir)
+            json_path, csv_path, _checksums = write_exports(records, args.export_dir)
+            export_paths = (json_path, csv_path)
         render_summary(
             mint_rollup,
             processed_mint,

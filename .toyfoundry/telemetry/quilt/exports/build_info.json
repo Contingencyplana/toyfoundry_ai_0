@@ -1,25 +1,4 @@
 {
-  "build_id": "order-020-standard-batch",
-  "timestamp": "2025-10-18T12:45:00Z",
-  "issuer": "toyfoundry_ai_0",
-  "order_id": "order-2025-10-15-020",
-  "source": "standard_batch",
-  "recipe": "quilt_exports@1.0",
-  "batch_config": {
-    "max_alfa_per_batch": 8,
-    "template_version": "1.0",
-    "forge_version": "forge_mint_alfa.py v1.0"
-  },
-  "artifacts": [
-    {
-      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
-      "sha256": "89DFAD6059B28113EDB9D26A6457D2C519EE89BA7A204620D155A4DA2F6E1381"
-    },
-    {
-      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
-      "sha256": "898B6CB367687EB4CFA3BA9440509295220601B9A5AE5E68B9A258D0735E595C"
-    }
-  ],
   "alfas_minted": [
     "alfa-1760719553-00000001",
     "alfa-1760719553-00000002",
@@ -30,9 +9,30 @@
     "alfa-1760719553-00000007",
     "alfa-1760719553-00000008"
   ],
+  "artifacts": [
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
+      "sha256": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441"
+    },
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
+      "sha256": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61"
+    }
+  ],
+  "batch_config": {
+    "forge_version": "forge_mint_alfa.py v1.0",
+    "max_alfa_per_batch": 8,
+    "template_version": "1.0"
+  },
+  "build_id": "order-020-standard-batch",
+  "issuer": "toyfoundry_ai_0",
+  "order_id": "order-2025-10-15-020",
+  "recipe": "quilt_exports@1.0",
+  "source": "standard_batch",
   "telemetry_summary": {
-    "total_mint_events": 9,
+    "ritual_events": 4,
     "successful_mints": 8,
-    "ritual_events": 4
-  }
+    "total_mint_events": 9
+  },
+  "timestamp": "2025-10-22T04:35:58Z"
 }

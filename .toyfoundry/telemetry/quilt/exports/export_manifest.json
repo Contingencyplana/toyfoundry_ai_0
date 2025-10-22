@@ -1,43 +1,43 @@
 {
-  "manifest_version": "1.0",
-  "order_id": "order-2025-10-15-020",
-  "generated_at": "2025-10-18T12:45:00Z",
-  "batch_summary": {
-    "alfas_minted": 8,
-    "max_alfa_per_batch": 8,
-    "batch_id": "alfa-1760719553",
-    "template_version": "1.0"
-  },
   "artifacts": [
     {
-      "filename": "composite_export.json",
-      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
-      "type": "telemetry_export",
-      "format": "json",
-      "sha256": "89DFAD6059B28113EDB9D26A6457D2C519EE89BA7A204620D155A4DA2F6E1381",
+      "accessible": true,
       "checksum_file": "composite_export.json.sha256",
-      "accessible": true
-    },
-    {
-      "filename": "composite_export.csv",
-      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
-      "type": "telemetry_export",
-      "format": "csv",
-      "sha256": "898B6CB367687EB4CFA3BA9440509295220601B9A5AE5E68B9A258D0735E595C",
-      "checksum_file": "composite_export.csv.sha256",
-      "accessible": true
-    },
-    {
-      "filename": "build_info.json",
-      "path": ".toyfoundry/telemetry/quilt/exports/build_info.json",
-      "type": "build_metadata",
+      "filename": "composite_export.json",
       "format": "json",
-      "accessible": true
+      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
+      "sha256": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441",
+      "type": "telemetry_export"
+    },
+    {
+      "accessible": true,
+      "checksum_file": "composite_export.csv.sha256",
+      "filename": "composite_export.csv",
+      "format": "csv",
+      "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
+      "sha256": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61",
+      "type": "telemetry_export"
+    },
+    {
+      "accessible": true,
+      "filename": "build_info.json",
+      "format": "json",
+      "path": ".toyfoundry/telemetry/quilt/exports/build_info.json",
+      "type": "build_metadata"
     }
   ],
+  "batch_summary": {
+    "alfas_minted": 8,
+    "batch_id": "alfa-1760719553",
+    "max_alfa_per_batch": 8,
+    "template_version": "1.0"
+  },
+  "consumer_notes": "All artifacts generated from Order 020 standard batch run. Alfas minted with max_alfa_per_batch=8 configuration. Checksums validated. Ready for toysoldier deployment.",
+  "generated_at": "2025-10-22T04:35:58Z",
   "manifest_locations": [
     ".toyfoundry/telemetry/quilt/exports/",
     "production/alfa_batches/"
   ],
-  "consumer_notes": "All artifacts generated from Order 020 standard batch run. Alfas minted with max_alfa_per_batch=8 configuration. Checksums validated. Ready for toysoldier deployment."
+  "manifest_version": "1.0",
+  "order_id": "order-2025-10-15-020"
 }

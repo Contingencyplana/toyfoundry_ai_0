@@ -12,20 +12,24 @@ python -m tools.telemetry.quilt_loom --export
 
 Generated artefacts:
 
-- `composite_export.json` — JSON export of composite quilt (flattened event records)
+- `composite_export.json` — JSON export of Order 021 schema records
 - `composite_export.csv` — CSV export with identical semantics
-- `composite_export.json.sha256` — SHA256 checksum of JSON export
-- `composite_export.csv.sha256` — SHA256 checksum of CSV export
-- `build_info.json` — provenance (commit, timestamp, parameters, sizes, checksums)
+- `<artifact>.sha256` — SHA256 checksums (JSON and CSV)
+- `build_info*.json` — provenance (commit, timestamp, parameters, checksums)
 
-Schema:
-- Schema ID: `toyfoundry-composite-telemetry@1.0`
-- Schema Version: `v1.0`
-- Human-readable: `planning/toyfoundry/telemetry/export_schema.md`
+Schema health checklist:
+
+- `schema_version` column present and equal to `"1.0"`
+- Ritual field is one of `forge`, `parade`, `purge`, `promote`
+- Status column constrained to `success`, `failure`, `partial`
+- Duration clamped to the `[0, 300000] ms` contract range
+- Human-readable spec: `planning/toyfoundry/telemetry/export_schema.md`
 
 Usage:
+
 - Consumers (e.g., `toysoldiers_ai_0`) ingest JSON or CSV, verify SHA256 using the sidecar `.sha256` files, and pin to schema version `v1.0`.
 
 CI Guidance:
+
 - Regenerate exports and checksums on push to main (docs-only changes may skip).
 - Verify `.sha256` files match current artifacts.
