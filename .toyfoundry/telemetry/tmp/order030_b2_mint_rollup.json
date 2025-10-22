@@ -1,0 +1,20 @@
+{
+  "alfa-1761140942-660fbcb7": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-22T13:49:02.178340+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1761140942-660fbcb7.json",
+    "last_seen": "2025-10-22T13:49:02.178340+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "Order030 Canary B2-A"
+  },
+  "alfa-1761140955-5313e059": {
+    "dry_runs": 0,
+    "first_seen": "2025-10-22T13:49:15.860856+00:00",
+    "last_output_path": "production\\alfa_batches\\alfa-1761140955-5313e059.json",
+    "last_seen": "2025-10-22T13:49:15.860856+00:00",
+    "latest_status": "minted",
+    "mint_runs": 1,
+    "name": "Order030 Canary B2-B"
+  }
+}

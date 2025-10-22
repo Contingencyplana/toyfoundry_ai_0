@@ -1,0 +1,25 @@
+{
+  "manifest_version": "1.0",
+  "order_id": "order-2025-10-15-030",
+  "batch": "canary_batch_b2",
+  "generated_at": "2025-10-22T05:06:00Z",
+  "artifacts": [
+    {
+      "filename": "composite_export.json",
+      "path": ".toyfoundry/telemetry/quilt/exports/order030_canary_b2/composite_export.json",
+      "format": "json",
+      "sha256": "D2F27695DFAF8F6FF69E03CDB8B8B4F1C82E79FF76B154878FAFE6444065EFE2"
+    },
+    {
+      "filename": "composite_export.csv",
+      "path": ".toyfoundry/telemetry/quilt/exports/order030_canary_b2/composite_export.csv",
+      "format": "csv",
+      "sha256": "47328DE8A788F84532F97A4078D1FBB0ED8162D347E32E0D3283603F0AAD9BCD"
+    }
+  ],
+  "counts": {
+    "records": 2,
+    "batches": 2
+  },
+  "notes": "Order 030 canary batch b2 generated under post-Order 036 schema alignment."
+}

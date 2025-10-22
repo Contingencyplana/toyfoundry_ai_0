@@ -1,7 +1,40 @@
 {
+  "order_id": "order-2025-10-15-030",
+  "build_id": "order030-canary-b2",
   "issuer": "toyfoundry_ai_0",
-  "source": "canary",
-  "build_id": "canary-2025-10-16-b2",
   "recipe": "quilt_exports@1.0",
-  "timestamp": "2025-10-16T05:31:47.8460730Z"
+  "timestamp": "2025-10-22T04:51:30Z",
+  "artifacts": [
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/canary_batch_b2.json",
+      "sha256": "16B6E1A05463D95BBCC212D1E8D043F4A16C0CCF85905EEA2845FD85F0DA0768"
+    },
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/canary_batch_b2.csv",
+      "sha256": "A60588A730585838AB5007B6757ACD0D09EB466BE0330964B9B3292BE3BBCC29"
+    }
+  ],
+  "canary_batches": [
+    "alfa-1761135043-17ffd111",
+    "alfa-1761135065-283578bf"
+  ],
+  "counts": {
+    "records": 2,
+    "units_total": 2
+  },
+  "retention_days": 7,
+  "rollback_plan": "Revert to pre-order030 export set or purge via forge_purge_alfa.",
+  "governance": {
+    "order_025_owner": "toyfoundry_ai_0",
+    "approvals": [
+      {
+        "approver": "VisionHolder",
+        "timestamp": "2025-10-16T03:49:53.4445080Z"
+      },
+      {
+        "approver": "SafetyLead",
+        "timestamp": "2025-10-16T03:49:53.4445080Z"
+      }
+    ]
+  }
 }

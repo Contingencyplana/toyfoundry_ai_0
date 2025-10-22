@@ -1,0 +1,48 @@
+{
+  "order_id": "order-2025-10-15-028",
+  "batch_name": "order028_canary",
+  "issuer": "toyfoundry_ai_0",
+  "timestamp": "2025-10-22T04:48:00Z",
+  "canary_batches": [
+    "alfa-1761133320-66974519",
+    "alfa-1761133332-1e8cf793",
+    "alfa-1761133344-328549e2"
+  ],
+  "artifact_root": ".toyfoundry/telemetry/quilt/exports/order028_canary/",
+  "artifacts": [
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/order028_canary/composite_export.json",
+      "sha256": "7D693137A87AA7082990D7F931F8F90853539DB4581F3175FBBA1C07003745BB"
+    },
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/order028_canary/composite_export.csv",
+      "sha256": "7D4E44F153747D7DADD2919AC3400D92DBE39F0BC86847FD4F24EF95A5C785A4"
+    }
+  ],
+  "counts": {
+    "records": 3,
+    "units_total": 3
+  },
+  "schema_version": "1.0",
+  "sandbox_validation": {
+    "forge_mint_dry_run": "python -m tools.forge.forge_mint_alfa --name 'Order028 Canary Dry Run' --dry-run",
+    "validator_command": "python tools/validate_order_021.py"
+  },
+  "retention_days": 7,
+  "rollback_plan": "Restore previous composite export and purge canary manifests via forge_purge_alfa if telemetry regression detected (entropy > 0.7).",
+  "governance": {
+    "order_025_owner": "toyfoundry_ai_0",
+    "approvals": [
+      {
+        "approver": "VisionHolder",
+        "role": "civilian",
+        "timestamp": "2025-10-16T03:49:53.4445080Z"
+      },
+      {
+        "approver": "SafetyLead",
+        "role": "safety",
+        "timestamp": "2025-10-16T03:49:53.4445080Z"
+      }
+    ]
+  }
+}

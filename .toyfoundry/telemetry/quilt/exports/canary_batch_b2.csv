@@ -1,4 +1,3 @@
-operation,status,units,duration_ms,timestamp,batch
-forge_mint_alfa,success,1,600,2025-10-16T05:31:47.8460730Z,b2
-forge_drill_alfa,success,1,700,2025-10-16T05:31:47.8460730Z,b2
-
+schema_version,batch_id,ritual,units_processed,status,duration_ms
+1.0,alfa-1761135043-17ffd111,forge,1,success,0
+1.0,alfa-1761135065-283578bf,forge,1,success,0

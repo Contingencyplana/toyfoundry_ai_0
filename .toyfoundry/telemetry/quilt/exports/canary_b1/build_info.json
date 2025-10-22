@@ -1,12 +1,42 @@
 {
-  "artifacts": {
-    "composite_export.csv": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61",
-    "composite_export.json": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441"
-  },
-  "batch_count": 2,
-  "batch_name": "canary_b1",
   "order_id": "order-2025-10-15-030",
+  "batch_name": "canary_b1",
+  "issuer": "toyfoundry_ai_0",
+  "timestamp": "2025-10-22T04:51:00Z",
+  "canary_batches": [
+    "alfa-1761133848-27b0aadd",
+    "alfa-1761134411-2e7d87d0"
+  ],
+  "artifacts": [
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/canary_b1/composite_export.json",
+      "sha256": "526B510959926E8299A1823BE03EE0D73F33A436D31CD87DA5A20EA594E4CC5C"
+    },
+    {
+      "path": ".toyfoundry/telemetry/quilt/exports/canary_b1/composite_export.csv",
+      "sha256": "B7BCC656145A87774563E503D162284E218E90B8693EDE91F5200D243919908D"
+    }
+  ],
+  "counts": {
+    "records": 2,
+    "units_total": 2
+  },
+  "schema_version": "1.0",
   "retention_days": 7,
-  "rollback_plan": "Revert to previous export; purge canary Alfas if entropy >0.7",
-  "timestamp": "2025-10-22T04:37:59Z"
+  "rollback_plan": "Restore previous batch exports or purge manifests via forge_purge_alfa if anomaly detected.",
+  "governance": {
+    "order_025_owner": "toyfoundry_ai_0",
+    "approvals": [
+      {
+        "approver": "VisionHolder",
+        "role": "civilian",
+        "timestamp": "2025-10-16T03:49:53.4445080Z"
+      },
+      {
+        "approver": "SafetyLead",
+        "role": "safety",
+        "timestamp": "2025-10-16T03:49:53.4445080Z"
+      }
+    ]
+  }
 }

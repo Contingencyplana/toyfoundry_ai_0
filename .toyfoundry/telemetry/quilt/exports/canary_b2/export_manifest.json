@@ -1,11 +1,24 @@
 {
-  "checksums": {
-    "composite_export.csv": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61",
-    "composite_export.json": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441"
-  },
-  "files": [
-    "composite_export.csv",
-    "composite_export.json"
+  "manifest_version": "1.0",
+  "order_id": "order-2025-10-15-030",
+  "batch_name": "canary_b2",
+  "generated_at": "2025-10-22T04:51:30Z",
+  "artifacts": [
+    {
+      "filename": "composite_export.json",
+      "path": ".toyfoundry/telemetry/quilt/exports/canary_b2/composite_export.json",
+      "format": "json",
+      "sha256": "16B6E1A05463D95BBCC212D1E8D043F4A16C0CCF85905EEA2845FD85F0DA0768"
+    },
+    {
+      "filename": "composite_export.csv",
+      "path": ".toyfoundry/telemetry/quilt/exports/canary_b2/composite_export.csv",
+      "format": "csv",
+      "sha256": "A60588A730585838AB5007B6757ACD0D09EB466BE0330964B9B3292BE3BBCC29"
+    }
   ],
-  "generated_at": "2025-10-22T04:38:18Z"
+  "counts": {
+    "records": 2,
+    "batches": 2
+  }
 }

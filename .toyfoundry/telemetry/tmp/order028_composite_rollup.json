@@ -1,0 +1,41 @@
+{
+  "alfa-1761133320-66974519": {
+    "last_updated": "2025-10-22T11:42:00.662452+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:42:00.662452+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133320-66974519.json",
+      "last_seen": "2025-10-22T11:42:00.662452+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order028 Canary A"
+    },
+    "rituals": {}
+  },
+  "alfa-1761133332-1e8cf793": {
+    "last_updated": "2025-10-22T11:42:12.457285+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:42:12.457285+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133332-1e8cf793.json",
+      "last_seen": "2025-10-22T11:42:12.457285+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order028 Canary B"
+    },
+    "rituals": {}
+  },
+  "alfa-1761133344-328549e2": {
+    "last_updated": "2025-10-22T11:42:24.706556+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:42:24.706556+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133344-328549e2.json",
+      "last_seen": "2025-10-22T11:42:24.706556+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order028 Canary C"
+    },
+    "rituals": {}
+  }
+}

@@ -1,0 +1,4 @@
+schema_version,batch_id,ritual,units_processed,status,duration_ms
+1.0,alfa-1761133320-66974519,forge,1,success,0
+1.0,alfa-1761133332-1e8cf793,forge,1,success,0
+1.0,alfa-1761133344-328549e2,forge,1,success,0

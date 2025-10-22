@@ -1,0 +1,24 @@
+{
+  "manifest_version": "1.0",
+  "order_id": "order-2025-10-15-028",
+  "generated_at": "2025-10-22T04:48:00Z",
+  "artifacts": [
+    {
+      "filename": "composite_export.json",
+      "path": ".toyfoundry/telemetry/quilt/exports/order028_canary/composite_export.json",
+      "format": "json",
+      "sha256": "7D693137A87AA7082990D7F931F8F90853539DB4581F3175FBBA1C07003745BB"
+    },
+    {
+      "filename": "composite_export.csv",
+      "path": ".toyfoundry/telemetry/quilt/exports/order028_canary/composite_export.csv",
+      "format": "csv",
+      "sha256": "7D4E44F153747D7DADD2919AC3400D92DBE39F0BC86847FD4F24EF95A5C785A4"
+    }
+  ],
+  "counts": {
+    "records": 3,
+    "batches": 3
+  },
+  "notes": "Order 028 canary composite export generated post-Order 036 schema remediation."
+}
