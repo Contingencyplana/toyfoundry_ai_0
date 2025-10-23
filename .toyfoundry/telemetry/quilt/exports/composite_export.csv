@@ -18,3 +18,13 @@ schema_version,batch_id,ritual,units_processed,status,duration_ms
 1.0,alfa-1760721475-3e07cfb0,forge,1,success,0
 1.0,alfa-1760721497-696d48bb,forge,1,success,0
 1.0,alfa-1760721502-3d89c5b5,forge,1,success,0
+1.0,alfa-1761133287-136af252,forge,1,partial,0
+1.0,alfa-1761133320-66974519,forge,1,success,0
+1.0,alfa-1761133332-1e8cf793,forge,1,success,0
+1.0,alfa-1761133344-328549e2,forge,1,success,0
+1.0,alfa-1761133848-27b0aadd,forge,1,success,0
+1.0,alfa-1761134411-2e7d87d0,forge,1,success,0
+1.0,alfa-1761135043-17ffd111,forge,1,success,0
+1.0,alfa-1761135065-283578bf,forge,1,success,0
+1.0,alfa-1761140942-660fbcb7,forge,1,success,0
+1.0,alfa-1761140955-5313e059,forge,1,success,0

@@ -6,7 +6,7 @@
       "filename": "composite_export.json",
       "format": "json",
       "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
-      "sha256": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441",
+      "sha256": "65363CD019869DA93E381505083C39FDFDD8A05871D0DF9556A611C438863F6D",
       "type": "telemetry_export"
     },
     {
@@ -15,7 +15,7 @@
       "filename": "composite_export.csv",
       "format": "csv",
       "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
-      "sha256": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61",
+      "sha256": "22F76BC8A1951BFB7BACB017F0105587395EA8D12CDA413062CFB63DFF749FC2",
       "type": "telemetry_export"
     },
     {
@@ -33,7 +33,7 @@
     "template_version": "1.0"
   },
   "consumer_notes": "All artifacts generated from Order 020 standard batch run. Alfas minted with max_alfa_per_batch=8 configuration. Checksums validated. Ready for toysoldier deployment.",
-  "generated_at": "2025-10-22T04:35:58Z",
+  "generated_at": "2025-10-23T05:27:54Z",
   "manifest_locations": [
     ".toyfoundry/telemetry/quilt/exports/",
     "production/alfa_batches/"

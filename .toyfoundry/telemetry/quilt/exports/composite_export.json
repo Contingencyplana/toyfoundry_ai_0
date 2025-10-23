@@ -150,5 +150,85 @@
     "schema_version": "1.0",
     "status": "success",
     "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761133287-136af252",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "partial",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761133320-66974519",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761133332-1e8cf793",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761133344-328549e2",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761133848-27b0aadd",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761134411-2e7d87d0",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761135043-17ffd111",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761135065-283578bf",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761140942-660fbcb7",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
+  },
+  {
+    "batch_id": "alfa-1761140955-5313e059",
+    "duration_ms": 0,
+    "ritual": "forge",
+    "schema_version": "1.0",
+    "status": "success",
+    "units_processed": 1
   }
 ]

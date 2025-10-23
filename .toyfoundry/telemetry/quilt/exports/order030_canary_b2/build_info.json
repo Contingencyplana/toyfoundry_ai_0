@@ -1,12 +1,4 @@
 {
-  "order_id": "order-2025-10-15-030",
-  "batch_name": "canary_batch_b2",
-  "issuer": "toyfoundry_ai_0",
-  "timestamp": "2025-10-22T05:06:00Z",
-  "batch_contents": [
-    "alfa-1761140942-660fbcb7",
-    "alfa-1761140955-5313e059"
-  ],
   "artifact_root": ".toyfoundry/telemetry/quilt/exports/order030_canary_b2/",
   "artifacts": [
     {
@@ -18,15 +10,16 @@
       "sha256": "47328DE8A788F84532F97A4078D1FBB0ED8162D347E32E0D3283603F0AAD9BCD"
     }
   ],
+  "batch_contents": [
+    "alfa-1761140942-660fbcb7",
+    "alfa-1761140955-5313e059"
+  ],
+  "batch_name": "canary_batch_b2",
   "counts": {
     "records": 2,
     "units_total": 2
   },
-  "schema_version": "1.0",
-  "retention_days": 7,
-  "rollback_plan": "Restore prior export set and purge manifests via forge_purge_alfa if anomaly detected.",
   "governance": {
-    "order_025_owner": "toyfoundry_ai_0",
     "approvals": [
       {
         "approver": "VisionHolder",
@@ -36,6 +29,13 @@
         "approver": "SafetyLead",
         "timestamp": "2025-10-16T03:49:53.4445080Z"
       }
-    ]
-  }
+    ],
+    "order_025_owner": "toyfoundry_ai_0"
+  },
+  "issuer": "toyfoundry_ai_0",
+  "order_id": "order-2025-10-15-030",
+  "retention_days": 7,
+  "rollback_plan": "Restore prior export set and purge manifests via forge_purge_alfa if anomaly detected.",
+  "schema_version": "1.0",
+  "timestamp": "2025-10-23T05:29:49Z"
 }

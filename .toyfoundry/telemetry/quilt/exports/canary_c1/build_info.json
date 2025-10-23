@@ -3,10 +3,10 @@
     "composite_export.csv": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61",
     "composite_export.json": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441"
   },
-  "batch_count": 3,
+  "batch_count": 16,
   "batch_name": "canary_c1",
   "order_id": "order-2025-10-15-028",
   "retention_days": 7,
   "rollback_plan": "Revert to previous export; purge canary Alfas if entropy >0.7",
-  "timestamp": "2025-10-22T04:37:49Z"
+  "timestamp": "2025-10-23T05:29:49Z"
 }

@@ -12,11 +12,11 @@
   "artifacts": [
     {
       "path": ".toyfoundry/telemetry/quilt/exports/composite_export.json",
-      "sha256": "844B7F8D6867F346DA0050B4202482C72EE40370B360635C814A27AAD7644441"
+      "sha256": "65363CD019869DA93E381505083C39FDFDD8A05871D0DF9556A611C438863F6D"
     },
     {
       "path": ".toyfoundry/telemetry/quilt/exports/composite_export.csv",
-      "sha256": "9F87FE126A8A6CC90CAE18C0AE298070C560D70D9C83ABE922EED5F1FD62EA61"
+      "sha256": "22F76BC8A1951BFB7BACB017F0105587395EA8D12CDA413062CFB63DFF749FC2"
     }
   ],
   "batch_config": {
@@ -34,5 +34,5 @@
     "successful_mints": 8,
     "total_mint_events": 9
   },
-  "timestamp": "2025-10-22T04:35:58Z"
+  "timestamp": "2025-10-23T05:27:54Z"
 }

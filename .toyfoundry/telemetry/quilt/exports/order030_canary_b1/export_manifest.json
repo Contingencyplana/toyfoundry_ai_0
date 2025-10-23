@@ -1,25 +1,25 @@
 {
-  "manifest_version": "1.0",
-  "order_id": "order-2025-10-15-030",
-  "batch": "canary_batch_b1",
-  "generated_at": "2025-10-22T05:02:00Z",
   "artifacts": [
     {
       "filename": "composite_export.json",
-      "path": ".toyfoundry/telemetry/quilt/exports/order030_canary_b1/composite_export.json",
       "format": "json",
+      "path": ".toyfoundry/telemetry/quilt/exports/order030_canary_b1/composite_export.json",
       "sha256": "526B510959926E8299A1823BE03EE0D73F33A436D31CD87DA5A20EA594E4CC5C"
     },
     {
       "filename": "composite_export.csv",
-      "path": ".toyfoundry/telemetry/quilt/exports/order030_canary_b1/composite_export.csv",
       "format": "csv",
+      "path": ".toyfoundry/telemetry/quilt/exports/order030_canary_b1/composite_export.csv",
       "sha256": "B7BCC656145A87774563E503D162284E218E90B8693EDE91F5200D243919908D"
     }
   ],
+  "batch": "canary_batch_b1",
   "counts": {
-    "records": 2,
-    "batches": 2
+    "batches": 2,
+    "records": 2
   },
-  "notes": "Order 030 canary batch b1 generated under post-Order 036 schema alignment."
+  "generated_at": "2025-10-23T05:29:49Z",
+  "manifest_version": "1.0",
+  "notes": "Order 030 canary batch b1 generated under post-Order 036 schema alignment.",
+  "order_id": "order-2025-10-15-030"
 }

@@ -275,5 +275,135 @@
       "name": "canary_batch_b2_alfa_02"
     },
     "rituals": {}
+  },
+  "alfa-1761133287-136af252": {
+    "last_updated": "2025-10-22T11:41:27.178073+00:00",
+    "mint": {
+      "dry_runs": 1,
+      "first_seen": "2025-10-22T11:41:27.178073+00:00",
+      "last_output_path": null,
+      "last_seen": "2025-10-22T11:41:27.178073+00:00",
+      "latest_status": "draft",
+      "mint_runs": 0,
+      "name": "Order028 Canary Dry Run"
+    },
+    "rituals": {}
+  },
+  "alfa-1761133320-66974519": {
+    "last_updated": "2025-10-22T11:42:00.662452+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:42:00.662452+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133320-66974519.json",
+      "last_seen": "2025-10-22T11:42:00.662452+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order028 Canary A"
+    },
+    "rituals": {}
+  },
+  "alfa-1761133332-1e8cf793": {
+    "last_updated": "2025-10-22T11:42:12.457285+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:42:12.457285+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133332-1e8cf793.json",
+      "last_seen": "2025-10-22T11:42:12.457285+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order028 Canary B"
+    },
+    "rituals": {}
+  },
+  "alfa-1761133344-328549e2": {
+    "last_updated": "2025-10-22T11:42:24.706556+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:42:24.706556+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133344-328549e2.json",
+      "last_seen": "2025-10-22T11:42:24.706556+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order028 Canary C"
+    },
+    "rituals": {}
+  },
+  "alfa-1761133848-27b0aadd": {
+    "last_updated": "2025-10-22T11:50:48.493987+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T11:50:48.493987+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761133848-27b0aadd.json",
+      "last_seen": "2025-10-22T11:50:48.493987+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order030 Canary B1-A"
+    },
+    "rituals": {}
+  },
+  "alfa-1761134411-2e7d87d0": {
+    "last_updated": "2025-10-22T12:00:11.835372+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T12:00:11.835372+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761134411-2e7d87d0.json",
+      "last_seen": "2025-10-22T12:00:11.835372+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order030 Canary B1-B"
+    },
+    "rituals": {}
+  },
+  "alfa-1761135043-17ffd111": {
+    "last_updated": "2025-10-22T12:10:43.326249+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T12:10:43.326249+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761135043-17ffd111.json",
+      "last_seen": "2025-10-22T12:10:43.326249+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order030 Canary B2-A"
+    },
+    "rituals": {}
+  },
+  "alfa-1761135065-283578bf": {
+    "last_updated": "2025-10-22T12:11:05.458198+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T12:11:05.458198+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761135065-283578bf.json",
+      "last_seen": "2025-10-22T12:11:05.458198+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order030 Canary B2-B"
+    },
+    "rituals": {}
+  },
+  "alfa-1761140942-660fbcb7": {
+    "last_updated": "2025-10-22T13:49:02.178340+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T13:49:02.178340+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761140942-660fbcb7.json",
+      "last_seen": "2025-10-22T13:49:02.178340+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order030 Canary B2-A"
+    },
+    "rituals": {}
+  },
+  "alfa-1761140955-5313e059": {
+    "last_updated": "2025-10-22T13:49:15.860856+00:00",
+    "mint": {
+      "dry_runs": 0,
+      "first_seen": "2025-10-22T13:49:15.860856+00:00",
+      "last_output_path": "production\\alfa_batches\\alfa-1761140955-5313e059.json",
+      "last_seen": "2025-10-22T13:49:15.860856+00:00",
+      "latest_status": "minted",
+      "mint_runs": 1,
+      "name": "Order030 Canary B2-B"
+    },
+    "rituals": {}
   }
 }
