@@ -4,11 +4,12 @@
 
 Toyfoundry is the manufacturing wing of the SHAGI programme. This workspace hosts the playable-manufacturing experiments that translate High Command orders into factory, telemetry, and narrative outcomes. It is aligned to the Five Major Pivots; for full doctrine see `new_major_pivots/README.md`.
 
-## Current Status — 25 Oct 2025
+## Current Status — 26 Oct 2025
 
 - Order-036 remediation completed; regenerated exports validated and reported to High Command.
-- Pivot Five (emoji-first language bridge) is in activation planning alongside the existing four pivots.
-- Exchange acknowledgements and reports are current; waiting on follow-up guidance for cross-workspace mirroring.
+- Pivot Five (emoji-first language bridge) alignment acknowledged; `tools/factory_order_emitter.py` ready for translator integration.
+- Narration handoff checklist drafted (`planning/emoji_language/war_office_handoff_checklist.md`) pending War Office asset delivery.
+- Exchange acknowledgements and reports are current; awaiting High Command integration orders after cross-workspace sync.
 
 ## Critical Directories
 
@@ -23,6 +24,7 @@ Toyfoundry is the manufacturing wing of the SHAGI programme. This workspace host
 |--------|-----------|----------------|
 | Alfa Zero | `docs/alfa_zero_spec.md` | Phase 1 static grid renderer |
 | Pivot Five | `new_major_pivots/new_major_pivot_5.md` | Finalize Level-0 glyph grammar |
+| Factory Order Integration | `tools/factory_order_emitter.py` | Promote translator payloads under `factory-order@1.0` |
 | Telemetry Quilt | `.toyfoundry/telemetry/quilt/exports/` | Maintain validator parity post-orders |
 
 ## Getting Oriented

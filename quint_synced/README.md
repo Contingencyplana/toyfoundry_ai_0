@@ -18,6 +18,7 @@ Update the files here first, then immediately propagate the exact same change to
 | v1.1 | 2025-10-26 | Added action orders requesting ACK/TODO from each workspace | Pending front acknowledgements |
 | v1.2 | 2025-10-26 | Pivot Five emoji-first alignment updates staged here | VC (source) · Pending HC · TF · TS · RD |
 | v1.3 | 2025-10-26 | RD review + adoption of Pivot Five alignment set; ready to propagate outward | RD · Pending HC · TF · TS |
+| v1.4 | 2025-10-26 | Toyfoundry ACK: emitter bridge online + War Office handoff checklist drafted | TF · Pending HC · TS · VC · RD |
 
 **Process reminder:**
 
