@@ -146,6 +146,7 @@ def log_discrepancies(path: Path, order_id: str, data: Mapping[str, object]) -> 
 
 def process_orders(config: MonitoringConfig) -> bool:
     ensure_dirs(config.telemetry_dir, config.narrator_metrics.parent, config.glyph_log.parent)
+    config.glyph_log.touch(exist_ok=True)
     state_path = config.telemetry_dir / STATE_FILENAME
     processed = load_state(state_path)
     updated = False

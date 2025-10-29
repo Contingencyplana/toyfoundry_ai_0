@@ -1,0 +1,17 @@
+[
+  {
+    "order_id": "TF-ALFA2-MONITOR-01",
+    "checksum_sha256": "e48fca992f2dcc458cb85892539757cefa07186298b85e83197bc8da7ba2fdce",
+    "summary": "Forge crafts the ally to secure victory.",
+    "narration_line": "Forge crafts the ally to secure victory.",
+    "beats": [
+      "Forge",
+      "crafts",
+      "the ally",
+      "to secure victory"
+    ],
+    "glyph_count": 4,
+    "telemetry_status": "success",
+    "timestamp": "2025-10-29T08:40:57.325833+00:00"
+  }
+]

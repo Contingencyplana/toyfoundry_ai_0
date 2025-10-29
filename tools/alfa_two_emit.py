@@ -7,12 +7,25 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterable, List
 
-from tools.factory_order_emitter import (
+try:
+    from tools.factory_order_emitter import (
+        PayloadValidationError,
+        build_factory_order,
+        load_translator_payload,
+        write_factory_order,
+    )
+except ModuleNotFoundError:  # pragma: no cover - script execution fallback
+    import sys
+
+    REPO_ROOT = Path(__file__).resolve().parents[1]
+    if str(REPO_ROOT) not in sys.path:
+        sys.path.insert(0, str(REPO_ROOT))
+    from tools.factory_order_emitter import (
     PayloadValidationError,
     build_factory_order,
     load_translator_payload,
     write_factory_order,
-)
+    )
 
 DEFAULT_INPUT_DIR = Path("tests/alfa_two")
 DEFAULT_OUTPUT_DIR = Path("exchange/orders/outbox/emoji_runtime")
