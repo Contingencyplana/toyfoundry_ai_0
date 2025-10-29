@@ -1,0 +1,23 @@
+{
+  "schema": "factory-order@1.0",
+  "summary": "Forge attempts to animate the shield without full power.",
+  "glyph_chain": ["🛠️", "🛡️", "⚡"],
+  "intent": {
+    "actor": "forge",
+    "action": "animate",
+    "target": "shield",
+    "qualifiers": ["unstable"],
+    "outcome": "pending"
+  },
+  "telemetry_stub": {
+    "batch_id": "forge-animate-20251026T030000Z",
+    "ritual": "forge",
+    "status": "error",
+    "duration_ms": 1450
+  },
+  "narration": {
+    "line": "Forge attempts to animate the shield without full power.",
+    "beats": ["Forge", "attempts", "animate the shield", "without full power"]
+  },
+  "translator_version": "spike-level0"
+}

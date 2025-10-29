@@ -54,7 +54,7 @@
 - Dry-run glyph sequences using `python tools/factory_order_emitter.py <sample>.json NUL --order-id sandbox-alfa-two --dry-run`.
 - Execute validator (`python tools/validate_order_021.py`) and monitoring hooks on mock payloads before live sessions.
 - Maintain `tests/alfa_two/` fixtures capturing success and failure cases.
-- Document replay steps in `planning/alfa_two_validation.md` (to be created during implementation).
+- Document replay steps in `planning/alfa_two_validation.md` and keep fixtures aligned with translator outputs.
 
 ## 8. Dependencies & Open Questions
 

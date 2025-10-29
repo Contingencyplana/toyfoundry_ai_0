@@ -1,0 +1,24 @@
+{
+  "schema": "factory-order@1.0",
+  "summary": "Scout charts the Nightlands passage for the forge.",
+  "glyph_chain": ["🛰️", "🧭", "🌌", "🛡️"],
+  "intent": {
+    "actor": "scout",
+    "action": "chart",
+    "target": "nightlands",
+    "qualifiers": ["protective"],
+    "outcome": "safe passage"
+  },
+  "telemetry_stub": {
+    "batch_id": "scout-chart-20251026T020000Z",
+    "ritual": "scouting",
+    "units_processed": 3,
+    "status": "success",
+    "duration_ms": 980
+  },
+  "narration": {
+    "line": "Scout charts the Nightlands passage for the forge.",
+    "beats": ["Scout", "charts", "Nightlands passage", "for the forge"]
+  },
+  "translator_version": "spike-level0"
+}

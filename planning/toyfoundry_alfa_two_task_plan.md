@@ -11,11 +11,15 @@ This plan captures the concrete engineering steps to execute once GitHub access 
 3. Extend `tools/factory_order_emitter.py` metadata block with the War Office narrator persona once provided.
 4. Wire emitted payloads into `exchange/orders/outbox/emoji_runtime/` with run IDs (`TF-ALFA2-<timestamp>`).
 
+*Status (2025-10-29): Fixtures staged and `tools/alfa_two_emit.py --dry-run` ready to fan out rituals; live emission awaits War Office go.*
+
 ## 2. Validator Integration
 
 1. Create `tests/alfa_two/test_factory_payloads.py` with unit tests covering happy path and schema mismatch scenarios using the new emitter.
 2. Add a CI hook (once GitHub returns) invoking `python tools/validate_order_021.py` against staged exports before merge.
 3. Document validator expectations in `planning/alfa_two_validation.md` (new file) and link from the mission brief.
+
+*Status (2025-10-29): `tests/alfa_two/test_factory_payloads.py` plus validation guide capture success/failure paths; CI hook to follow once GitHub unlocks.*
 
 ## 3. Monitoring Hooks
 
