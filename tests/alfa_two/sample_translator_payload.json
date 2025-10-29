@@ -1,0 +1,24 @@
+{
+  "schema": "factory-order@1.0",
+  "summary": "Forge crafts the ally to secure victory.",
+  "glyph_chain": ["🛠️", "⚒️", "🤖", "✅"],
+  "intent": {
+    "actor": "forge",
+    "action": "craft",
+    "target": "ally",
+    "qualifiers": [],
+    "outcome": "victory"
+  },
+  "telemetry_stub": {
+    "batch_id": "forge-craft-20251026T000000Z",
+    "ritual": "forge",
+    "units_processed": 4,
+    "status": "success",
+    "duration_ms": 1200
+  },
+  "narration": {
+    "line": "Forge crafts the ally to secure victory.",
+    "beats": ["Forge", "crafts", "the ally", "to secure victory"]
+  },
+  "translator_version": "spike-level0"
+}

@@ -1,4 +1,4 @@
-# Toyfoundry Alfa Two — Mission Brief (Pending GitHub Sync)
+# Toyfoundry Alfa Two — Mission Brief (Ready for War Office Review)
 
 ## 1. Objective
 
@@ -23,15 +23,15 @@
 | System | Description |
 | --- | --- |
 | Glyph Input | Emoji command chains (Level-0 lexicon; ≤7 glyphs). |
-| Translator | Must route through `tools/emoji_translator.py`; spike compatibility retained. |
-| Validator | Invoke `tools/validate_order_021.py` after each command batch. |
-| Monitoring Hooks | Use `tools/monitoring/schema_guard.py`, `narrator_log.py`, and `glyph_vo_audit.py` on every payload. |
-| Narration | Pull War Office stub; ensure `summary` mirrors narration output. |
+| Translator → Factory Bridge | Ingest glyph payloads via `tools/factory_order_emitter.py` (dry-run first, then emit to exchange). |
+| Validator | Invoke `python tools/validate_order_021.py` after each command batch to confirm Order 021 compliance. |
+| Monitoring Hooks | Wire payload watcher + narrator parity checks (see Section 7 tasks) using `tools/manufacturing_order_watcher.py` extensions. |
+| Narration | Pull War Office stub; ensure `summary` mirrors narration output before emission. |
 
 ## 4. Data & Telemetry Requirements
 
-- Emit `factory-order@1.0` payloads into `exports/factory_orders/`.
-- Append narrator metrics to `monitoring/logs/narrator_metrics.json`.
+- Emit `factory-order@1.0` payloads into `exports/factory_orders/` (staging) and `exchange/orders/outbox/emoji_runtime/` (if High Command requests live hand-off).
+- Append narrator metrics to `monitoring/logs/narrator_metrics.json` (create file if absent).
 - Record glyph/VO audit events in `monitoring/logs/glyph_vo_discrepancies.log`.
 - Store schema guard baselines under `monitoring/baselines/` with timestamp.
 - Tag all files with run ID format `TF-ALFA2-{YYYYMMDD}-{HHMM}`.
@@ -51,23 +51,24 @@
 
 ## 7. Testing & Validation Plan
 
-- Dry-run glyph sequences using `python tools/emoji_translator_spike.py --glyph-file <sample>`.
-- Execute validator and monitoring hooks on mock payloads before live sessions.
+- Dry-run glyph sequences using `python tools/factory_order_emitter.py <sample>.json NUL --order-id sandbox-alfa-two --dry-run`.
+- Execute validator (`python tools/validate_order_021.py`) and monitoring hooks on mock payloads before live sessions.
 - Maintain `tests/alfa_two/` fixtures capturing success and failure cases.
 - Document replay steps in `planning/alfa_two_validation.md` (to be created during implementation).
 
 ## 8. Dependencies & Open Questions
 
 - Await War Office confirmation that the placeholder CTA URL is acceptable for this mission.
-- Confirm access to translated payload samples from Toysoldiers for baseline seeding.
+- Confirm access to translated payload samples from Toysoldiers for baseline seeding (or request replay artifacts from `translator_round_trips.jsonl`).
 - Determine whether shared narration assets need localization variants.
+- Clarify monitoring hook ownership: Toyfoundry implements schema/narration guards, Valiant Citadel observes telemetry.
 
 ## 9. Delivery Checklist (Pending Sync)
 
 - [ ] Mission brief reviewed and archived in Toyfoundry planning docs.
 - [ ] Implementation branch created locally (pending GitHub unlock).
-- [ ] Validator, translator, and monitoring tooling smoke-tested.
+- [ ] Translator bridge (`tools/factory_order_emitter.py`), validator, and monitoring hook scaffolding smoke-tested with sample payloads.
 - [ ] Morningate export templates prepared.
 - [ ] Sync queued for execution via `python tools/quint_sync.py --push` once access resumes.
 
-*Status: Prepared locally; awaiting GitHub Support clearance before publishing.*
+*Status: Ready for War Office approval; awaiting GitHub Support clearance before publishing.*
