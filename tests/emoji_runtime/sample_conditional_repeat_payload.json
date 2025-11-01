@@ -1,0 +1,26 @@
+{
+  "schema": "emoji-runtime@1.0",
+  "template": "conditional_repeat",
+  "summary": "Scout tests the barrier, then signals fallback support.",
+  "raw": ["🛰️", "🧭", "🛡️", "🔁", "🆘"],
+  "intent": {
+    "actor": "scout",
+    "action": "probe",
+    "target": "barrier",
+    "qualifiers": ["cautious"],
+    "outcome": "victory"
+  },
+  "telemetry_stub": {
+    "batch_id": "scout-probe-20251101T100700Z",
+    "ritual": "scout",
+    "units_processed": 5,
+    "status": "warning",
+    "duration_ms": 1280
+  },
+  "spoken": ["scout", "tests", "barrier", "repeat", "fallback"],
+  "timestamp": "2025-11-01T10:07:00Z",
+  "outcomes": ["victory", "fallback_signal"],
+  "metadata": {
+    "translator_version": "emoji-runtime-1.0"
+  }
+}

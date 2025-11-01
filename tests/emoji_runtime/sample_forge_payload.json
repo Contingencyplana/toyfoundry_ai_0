@@ -1,0 +1,35 @@
+{
+  "schema": "emoji-runtime@1.0",
+  "template": "basic_ritual_forge",
+  "summary": "Forge crafts a steadfast ally to hold the line.",
+  "glyph_chain": ["🛠️", "⚒️", "🛡️", "🤖"],
+  "intent": {
+    "actor": "forge",
+    "action": "craft",
+    "target": "ally",
+    "qualifiers": ["steadfast"],
+    "outcome": "victory"
+  },
+  "telemetry_stub": {
+    "batch_id": "forge-craft-20251101T100500Z",
+    "ritual": "forge",
+    "units_processed": 4,
+    "status": "success",
+    "duration_ms": 930
+  },
+  "narration": {
+    "line": "Forge crafts a steadfast ally to hold the line.",
+    "beats": ["Forge", "crafts", "steadfast ally", "hold the line"]
+  },
+  "timestamp_generated": "2025-11-01T10:05:00Z",
+  "directives": [
+    {"type": "glyph", "value": "🛠️"},
+    {"type": "glyph", "value": "⚒️"},
+    {"type": "glyph", "value": "🛡️"},
+    {"type": "glyph", "value": "🤖"}
+  ],
+  "outcomes": ["victory"],
+  "metadata": {
+    "translator_version": "emoji-runtime-1.0"
+  }
+}
