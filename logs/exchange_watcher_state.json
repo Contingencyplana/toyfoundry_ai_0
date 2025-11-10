@@ -1,51 +1,85 @@
 {
-  "orders_pending": {},
-  "acks_pending": {
-    "order-2025-10-14-012": {
-      "id": "order-2025-10-14-012",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-14-012-ack.json",
-      "summary": "toyfoundry_ai_0",
-      "timestamp": "2025-10-15T00:35:00Z"
+  "orders_pending": {
+    "order-2025-11-07-044": {
+      "id": "order-2025-11-07-044",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\orders\\pending\\order-2025-11-07-044.json",
+      "summary": "Relieve the President\u2019s Burden \u2014 automation, comfort, playability",
+      "timestamp": "2025-11-07T12:00:00Z"
     },
-    "order-2025-10-14-013": {
-      "id": "order-2025-10-14-013",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-14-013-ack.json",
-      "summary": "toysoldiers_ai_0",
-      "timestamp": "2025-10-15T00:35:00Z"
+    "order-2025-11-09-045": {
+      "id": "order-2025-11-09-045",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\orders\\pending\\order-2025-11-09-045.json",
+      "summary": "UI Overlay Integration Slice \u2014 runtime shells, overlay loop, validation runway",
+      "timestamp": "2025-11-09T12:00:00Z"
+    },
+    "order-2025-11-10-046": {
+      "id": "order-2025-11-10-046",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\orders\\pending\\order-2025-11-10-046.json",
+      "summary": "Outlands Activation Slice \u2014 Lore layer pilot for Pivot Seven",
+      "timestamp": "2025-11-10T14:30:00Z"
+    }
+  },
+  "acks_pending": {
+    "order-2025-10-15-020-ack": {
+      "id": "order-2025-10-15-020-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-020-ack.json"
+    },
+    "order-2025-10-15-024-ack": {
+      "id": "order-2025-10-15-024-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-024-ack.json"
+    },
+    "order-2025-10-15-026-ack": {
+      "id": "order-2025-10-15-026-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-026-ack.json"
+    },
+    "order-2025-10-15-028-ack": {
+      "id": "order-2025-10-15-028-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-028-ack.json"
+    },
+    "order-2025-10-15-029-ack": {
+      "id": "order-2025-10-15-029-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-029-ack.json"
+    },
+    "order-2025-10-15-030-ack": {
+      "id": "order-2025-10-15-030-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-030-ack.json"
+    },
+    "order-2025-10-15-031-ack": {
+      "id": "order-2025-10-15-031-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-15-031-ack.json"
+    },
+    "order-2025-10-18-036-ack": {
+      "id": "order-2025-10-18-036-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-10-18-036-ack.json"
+    },
+    "order-2025-11-09-045-ack": {
+      "id": "order-2025-11-09-045-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-11-09-045-ack.json"
+    },
+    "order-2025-11-10-046-ack": {
+      "id": "order-2025-11-10-046-ack",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\acknowledgements\\pending\\order-2025-11-10-046-ack.json"
     }
   },
   "reports_inbox": {
-    "order-2025-10-14-012-report": {
-      "id": "order-2025-10-14-012-report",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-14-012-report.json",
-      "summary": "Automation + versioning for telemetry exports; CI + checksums.",
-      "timestamp": "<UTC ISO-8601>"
+    "order-2025-10-20-001-report": {
+      "id": "order-2025-10-20-001-report",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-20-001-report.json"
     },
-    "order-2025-10-14-013-report": {
-      "id": "order-2025-10-14-013-report",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-14-013-report.json",
-      "summary": "Ingestion + validation + monitoring of Toyfoundry exports.",
-      "timestamp": "<UTC ISO-8601>"
+    "order-2025-11-01-041-report": {
+      "id": "order-2025-11-01-041-report",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-11-01-041-report.json",
+      "summary": "Factory-order ingestion and monitoring for emoji-runtime promotions is operational; Toyfoundry dry-run payloads now validate cleanly and lore checks pass."
     },
-    "order-2025-10-15-014-report": {
-      "id": "order-2025-10-15-014-report",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-014-report.json",
-      "summary": "Canary batches produced and exports emitted \u2014 draft stub."
+    "order-2025-11-09-045-report": {
+      "id": "order-2025-11-09-045-report",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-11-09-045-report.json",
+      "summary": "Draft report placeholder for Order 045 (UI overlay push) \u2014 will include shell enhancements, narration hooks, and comfort loop validation evidence."
     },
-    "order-2025-10-15-015-report": {
-      "id": "order-2025-10-15-015-report",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-015-report.json",
-      "summary": "Canary consumer acceptance \u2014 draft stub."
-    },
-    "order-2025-10-15-016-report": {
-      "id": "order-2025-10-15-016-report",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-016-report.json",
-      "summary": "Watcher standardization - draft stub."
-    },
-    "order-2025-10-15-017-report": {
-      "id": "order-2025-10-15-017-report",
-      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-10-15-017-report.json",
-      "summary": "Watcher installation - draft stub."
+    "order-2025-11-10-046-report": {
+      "id": "order-2025-11-10-046-report",
+      "path": "C:\\Users\\Admin\\toyfoundry_ai_0\\exchange\\reports\\inbox\\order-2025-11-10-046-report.json",
+      "summary": "Order 046 closed: Lore layer metadata threads are live end-to-end, Alfa Zero exposes an operator-controlled toggle, evidence captured via contracts/tests, and comfort/outlands guides refreshed with consent notes."
     }
   }
 }
