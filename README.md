@@ -36,3 +36,9 @@ Toyfoundry is the manufacturing wing of the SHAGI programme. This workspace host
 ## Reporting
 
 Report updates and new telemetry to High Command via the exchange protocol. Summaries for each corrective action should include regenerated checksums, validator evidence, and storyboard notes that map back to the Five Major Pivots.
+
+---
+
+## Python commands
+- Readiness: `python -m tools.ops_readiness`
+- Exchange (validate + sync): `python tools/exchange_all.py`
