@@ -1,11 +1,11 @@
 {
-  "timestamp_utc": "2025-11-13T13:59:56.689976+00:00",
+  "timestamp_utc": "2025-11-13T14:59:10.676069+00:00",
   "workspace": "toyfoundry_ai_0",
   "python": "3.12.6",
   "hub_path": "C:\\Users\\Admin\\high_command_exchange",
   "hub_exists": true,
   "docs_present": {
-    "C:\\Users\\Admin\\toyfoundry_ai_0\\RUNBOOK.md": false
+    "C:\\Users\\Admin\\toyfoundry_ai_0\\RUNBOOK.md": true
   },
   "staged_checks": [
     {
@@ -24,5 +24,5 @@
       "missing": []
     }
   ],
-  "ok": false
+  "ok": true
 }
