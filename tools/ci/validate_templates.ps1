@@ -4,9 +4,20 @@ param(
 $ErrorActionPreference = 'Stop'
 $errors = @()
 
+function ConvertToHashtable($obj) {
+  if ($null -eq $obj) { return @{} }
+  if ($obj -is [System.Collections.IDictionary]) { return $obj }
+  $hash = @{}
+  foreach ($prop in $obj.PSObject.Properties) {
+    $hash[$prop.Name] = $prop.Value
+  }
+  return $hash
+}
+
 function Test-JsonFile($path, $requiredKeys) {
   try {
-    $obj = Get-Content -Raw -LiteralPath $path | ConvertFrom-Json -AsHashtable
+    $obj = Get-Content -Raw -LiteralPath $path | ConvertFrom-Json
+    $obj = ConvertToHashtable $obj
   } catch {
     $script:errors += ("Invalid JSON: {0}: {1}" -f $path, $_)
     return
@@ -25,7 +36,8 @@ Test-JsonFile 'exchange/reports/templates/change-report.template.json' @('schema
 
 # Validate lanes config
 try {
-  $lanes = Get-Content -Raw -LiteralPath 'tools/telemetry/canary_sandbox.sample.json' | ConvertFrom-Json -AsHashtable
+  $lanes = Get-Content -Raw -LiteralPath 'tools/telemetry/canary_sandbox.sample.json' | ConvertFrom-Json
+  $lanes = ConvertToHashtable $lanes
   if (-not $lanes.ContainsKey('lanes')) { $errors += 'Lanes config missing lanes[]' }
   if (-not $lanes.ContainsKey('telemetry')) { $errors += 'Lanes config missing telemetry{}' }
 } catch {
