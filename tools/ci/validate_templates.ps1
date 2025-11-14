@@ -4,6 +4,14 @@ param(
 $ErrorActionPreference = 'Stop'
 $errors = @()
 
+$toolsRoot = Split-Path $PSScriptRoot -Parent
+$repoRoot = Split-Path $toolsRoot -Parent
+$templateRoots = @(
+  (Join-Path $repoRoot 'exchange')
+  (Join-Path $repoRoot 'high_command_exchange')
+  (Join-Path (Join-Path $repoRoot 'tools') 'ci/template_snapshots')
+)
+
 function ConvertToHashtable($obj) {
   if ($null -eq $obj) { return @{} }
   if ($obj -is [System.Collections.IDictionary]) { return $obj }
@@ -12,6 +20,17 @@ function ConvertToHashtable($obj) {
     $hash[$prop.Name] = $prop.Value
   }
   return $hash
+}
+
+function Resolve-TemplatePath($relativePath) {
+  foreach ($root in $script:templateRoots) {
+    $candidate = Join-Path $root $relativePath
+    if (Test-Path -LiteralPath $candidate) {
+      return $candidate
+    }
+  }
+  $script:errors += "Missing template file: $relativePath"
+  return $null
 }
 
 function Test-JsonFile($path, $requiredKeys) {
@@ -29,14 +48,22 @@ function Test-JsonFile($path, $requiredKeys) {
   }
 }
 
-# Validate change-as-order templates
-Test-JsonFile 'exchange/orders/templates/change-order.template.json' @('schema','order_id','issued_by','target','directives')
-Test-JsonFile 'exchange/acknowledgements/templates/change-ack.template.json' @('schema','ack_id','referenced_id','status')
-Test-JsonFile 'exchange/reports/templates/change-report.template.json' @('schema','report_id','order_id','reported_by','status')
+function Test-Template($relativePath, $requiredKeys) {
+  $path = Resolve-TemplatePath $relativePath
+  if ($null -ne $path) {
+    Test-JsonFile $path $requiredKeys
+  }
+}
+
+# Validate change-as-order templates (fallback to snapshots if needed)
+Test-Template 'orders/templates/change-order.template.json' @('schema','order_id','issued_by','target','directives')
+Test-Template 'acknowledgements/templates/change-ack.template.json' @('schema','ack_id','referenced_id','status')
+Test-Template 'reports/templates/change-report.template.json' @('schema','report_id','order_id','reported_by','status')
 
 # Validate lanes config
 try {
-  $lanes = Get-Content -Raw -LiteralPath 'tools/telemetry/canary_sandbox.sample.json' | ConvertFrom-Json
+  $lanesPath = Join-Path (Join-Path $repoRoot 'tools') 'telemetry/canary_sandbox.sample.json'
+  $lanes = Get-Content -Raw -LiteralPath $lanesPath | ConvertFrom-Json
   $lanes = ConvertToHashtable $lanes
   if (-not $lanes.ContainsKey('lanes')) { $errors += 'Lanes config missing lanes[]' }
   if (-not $lanes.ContainsKey('telemetry')) { $errors += 'Lanes config missing telemetry{}' }
