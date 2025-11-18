@@ -7,50 +7,133 @@
       "path": "production/mass_alfa_batch1/alfa_m01",
       "exchange_slot": "genesis-delta",
       "focus": "Frontline factory twin / Delta",
-      "status": "seeded",
+      "status": "seeded/hydrated",
       "readiness_log": "production/mass_alfa_batch1/alfa_m01/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch1/alfa_m01/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M01-20251113T182415Z.json"
+      "hello_report": "outbox/reports/hello-Alfa-M01-20251113T182415Z.json",
+      "hydration": {
+        "workspace": "valiant_citadel_ai_0",
+        "order_id": "order-2025-11-14-055",
+        "hydrated_at": "2025-11-17T15:58:59Z",
+        "workspace_slot": "golf_00/delta_00 (kill-switch twin)",
+        "manifest": "../valiant_citadel_ai_0/production/mass_alfa_batch1/alfa_m01/README.md",
+        "telemetry": "../valiant_citadel_ai_0/production/mass_alfa_batch1/alfa_m01/telemetry.json",
+        "readiness_log": "../valiant_citadel_ai_0/logs/ops_readiness.json",
+        "exchange_log": "../valiant_citadel_ai_0/logs/exchange_all.json",
+        "ack": "../valiant_citadel_ai_0/outbox/acks/order-2025-11-14-055-ack.json",
+        "report": "../valiant_citadel_ai_0/outbox/reports/order-2025-11-14-055-report.json",
+        "hello": "../valiant_citadel_ai_0/outbox/reports/hello-Alfa-M01-20251117T155859Z.json",
+        "ledger": {
+          "path": "../valiant_citadel_ai_0/exchange/ledger/index.json",
+          "entry": "ledger-2025-11-14-055-delta"
+        }
+      }
     },
     {
       "id": "Alfa-M02",
       "path": "production/mass_alfa_batch1/alfa_m02",
       "exchange_slot": "genesis-theta",
       "focus": "Telemetry + contract bridge / Theta",
-      "status": "seeded",
+      "status": "seeded/hydrated",
       "readiness_log": "production/mass_alfa_batch1/alfa_m02/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch1/alfa_m02/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M02-20251113T182415Z.json"
+      "hello_report": "outbox/reports/hello-Alfa-M02-20251113T182415Z.json",
+      "hydration": {
+        "workspace": "r_and_d_ai_0",
+        "order_id": "order-2025-11-14-056",
+        "hydrated_at": "2025-11-18T00:25:30Z",
+        "workspace_slot": "golf_01/delta_12/alfa_02",
+        "manifest": "../r_and_d_ai_0/production/mass_alfa_batch1/alfa_m02/README.md",
+        "telemetry": "../r_and_d_ai_0/production/mass_alfa_batch1/alfa_m02/telemetry.json",
+        "readiness_log": "../r_and_d_ai_0/logs/mass_alfa_batch1/Alfa-M02/ops_readiness.json",
+        "exchange_log": "../r_and_d_ai_0/logs/mass_alfa_batch1/Alfa-M02/exchange_all.json",
+        "ack": "../r_and_d_ai_0/outbox/acks/order-2025-11-14-056-ack.json",
+        "report": "../r_and_d_ai_0/outbox/reports/order-2025-11-14-056-report.json",
+        "hello": "../r_and_d_ai_0/outbox/reports/hello-Alfa-M02-20251118T002600Z.json",
+        "ledger": {
+          "path": "../r_and_d_ai_0/exchange/ledger/index.json",
+          "entry": "order-2025-11-14-056"
+        }
+      }
     },
     {
       "id": "Alfa-M03",
       "path": "production/mass_alfa_batch1/alfa_m03",
       "exchange_slot": "genesis-zeta",
       "focus": "Lore + morale stitches / Zeta",
-      "status": "seeded",
+      "status": "seeded/hydrated",
       "readiness_log": "production/mass_alfa_batch1/alfa_m03/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch1/alfa_m03/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M03-20251113T182415Z.json"
+      "hello_report": "outbox/reports/hello-Alfa-M03-20251113T182415Z.json",
+      "hydration": {
+        "workspace": "tons_of_fun_ai_0",
+        "order_id": "order-2025-11-14-057",
+        "hydrated_at": "2025-11-18T12:04:00Z",
+        "workspace_slot": "golf_00/delta_00/alfa_03",
+        "manifest": "../tons_of_fun_ai_0/production/mass_alfa_batch1/alfa_m03/README.md",
+        "readiness_log": "../tons_of_fun_ai_0/logs/mass_alfa_batch1/Alfa-M03/ops_readiness.json",
+        "exchange_log": "../tons_of_fun_ai_0/logs/mass_alfa_batch1/Alfa-M03/exchange_all.json",
+        "ack": "../tons_of_fun_ai_0/outbox/acks/order-2025-11-14-057-ack.json",
+        "report": "../tons_of_fun_ai_0/outbox/reports/order-2025-11-14-057-report.json",
+        "hello": "../tons_of_fun_ai_0/outbox/reports/hello-Alfa-M03-20251118T120400Z.json",
+        "ledger": {
+          "path": "../high_command_exchange/ledger/2025-11.md",
+          "entry": "2025-11-17 12:04 TonsOfFun ORDER-057 Hydrated Alfa-M03 (Zeta) from forge-alfa@2025-11-13-054; hello/report/logs staged for hub sync."
+        }
+      }
     },
     {
       "id": "Alfa-M04",
       "path": "production/mass_alfa_batch1/alfa_m04",
       "exchange_slot": "genesis-kappa",
       "focus": "Comfort + UI overlay instrumentation",
-      "status": "seeded",
+      "status": "seeded/hydrated",
       "readiness_log": "production/mass_alfa_batch1/alfa_m04/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch1/alfa_m04/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M04-20251113T182415Z.json"
+      "hello_report": "outbox/reports/hello-Alfa-M04-20251113T182415Z.json",
+      "hydration": {
+        "workspace": "toysoldiers_ai_0",
+        "order_id": "order-2025-11-14-058",
+        "hydrated_at": "2025-11-18T02:47:29Z",
+        "workspace_slot": "golf_03/kappa_04/alfa_m04",
+        "manifest": "../toysoldiers_ai_0/production/mass_alfa_batch1/alfa_m04/README.md",
+        "readiness_log": "../toysoldiers_ai_0/logs/mass_alfa_batch1/Alfa-M04/ops_readiness.json",
+        "exchange_log": "../toysoldiers_ai_0/logs/mass_alfa_batch1/Alfa-M04/exchange_all.json",
+        "ack": "../toysoldiers_ai_0/outbox/acks/order-2025-11-14-058-ack.json",
+        "report": "../toysoldiers_ai_0/outbox/reports/order-2025-11-14-058-report.json",
+        "hello": "../toysoldiers_ai_0/outbox/reports/hello-Alfa-M04-20251118T024729Z.json",
+        "ledger": {
+          "path": "../high_command_exchange/ledger/2025-11.md",
+          "entry": "2025-11-18 12:48 Toysoldiers ORDER-058 Gamma hydration complete: Alfa-M04 hello/ack/logs synced to hub (forge-alfa@2025-11-13-054)."
+        }
+      }
     },
     {
       "id": "Alfa-M05",
       "path": "production/mass_alfa_batch1/alfa_m05",
       "exchange_slot": "genesis-lambda",
       "focus": "Docs/standards companion",
-      "status": "seeded",
+      "status": "seeded/hydrated",
       "readiness_log": "production/mass_alfa_batch1/alfa_m05/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch1/alfa_m05/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M05-20251113T182415Z.json"
+      "hello_report": "outbox/reports/hello-Alfa-M05-20251113T182415Z.json",
+      "hydration": {
+        "workspace": "high_command_ai_0",
+        "order_id": "order-2025-11-14-059",
+        "hydrated_at": "2025-11-18T03:41:00Z",
+        "workspace_slot": "golf_00/delta_00/alfa_m05",
+        "manifest": "../high_command_ai_0/production/mass_alfa_batch1/alfa_m05/README.md",
+        "telemetry": "../high_command_ai_0/production/mass_alfa_batch1/alfa_m05/telemetry.json",
+        "readiness_log": "../high_command_ai_0/logs/mass_alfa_batch1/Alfa-M05/ops_readiness.json",
+        "exchange_log": "../high_command_ai_0/logs/mass_alfa_batch1/Alfa-M05/exchange_all.json",
+        "ack": "../high_command_ai_0/outbox/acks/order-2025-11-14-059-ack.json",
+        "report": "../high_command_ai_0/outbox/reports/order-2025-11-14-059-report.json",
+        "hello": "../high_command_ai_0/outbox/reports/hello-Alfa-M05-20251118T034100Z.json",
+        "ledger": {
+          "path": "../high_command_exchange/ledger/2025-11.md",
+          "entry": "2025-11-18 03:41 HighCommand ORDER-059 Alfa-M05 hydration complete for Alpha squad; readiness + hello/report synced to hub."
+        }
+      }
     }
   ]
 }
