@@ -1,0 +1,14 @@
+{
+  "schema": "signal-ack@1.0",
+  "order_id": "order-2025-11-19-060",
+  "ack_id": "order-2025-11-19-060-ack",
+  "workspace": "toyfoundry_ai_0",
+  "receiver": "high_command_ai_0",
+  "ack_timestamp": "2025-11-19T23:50:00Z",
+  "status": "acknowledged",
+  "notes": [
+    "Baseline frozen as forge-alfa@2025-11-19-060 (commit f419b3f) with readiness evidence logged at logs/ops_readiness.json.",
+    "Six instances (Alfa-M06...Alfa-M11) spawned under production/mass_alfa_batch2/ with Genesis Alpha-Iota slots + frontline feedback focus statements.",
+    "Hello reports staged (outbox/reports/hello-Alfa-M0[6-11]-20251119T133833Z.json) and ledger updated with Batch 2 baseline summary."
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "order_id": "order-2025-11-19-060",
+  "baseline_tag": "forge-alfa@2025-11-19-060",
+  "rank_set": "Genesis Alpha–Iota (Batch 2)",
+  "instances": [
+    {
+      "id": "Alfa-M06",
+      "path": "production/mass_alfa_batch2/alfa_m06",
+      "exchange_slot": "genesis-alpha",
+      "focus": "Lore-first intake rail for new recruits",
+      "status": "seeded/pending hydration",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m06/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m06/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M06-20251119T133833Z.json",
+      "hydration": {
+        "status": "pending",
+        "workspace": null,
+        "order_id": null,
+        "notes": "Clone into golf_04/alpha_04/alfa_m06 once the assigned genesis workspace pulls the baseline."
+      }
+    },
+    {
+      "id": "Alfa-M07",
+      "path": "production/mass_alfa_batch2/alfa_m07",
+      "exchange_slot": "genesis-beta",
+      "focus": "Music overlay for call-and-response acceleration",
+      "status": "seeded/pending hydration",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m07/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m07/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M07-20251119T133833Z.json",
+      "hydration": {
+        "status": "pending",
+        "workspace": null,
+        "order_id": null,
+        "notes": "Target golf_05/beta_02/alfa_m07 with music overlay hooks toggled on."
+      }
+    },
+    {
+      "id": "Alfa-M08",
+      "path": "production/mass_alfa_batch2/alfa_m08",
+      "exchange_slot": "genesis-gamma",
+      "focus": "Music cue for squad synchronization",
+      "status": "seeded/pending hydration",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m08/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m08/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M08-20251119T133833Z.json",
+      "hydration": {
+        "status": "pending",
+        "workspace": null,
+        "order_id": null,
+        "notes": "Hydrate under golf_05/gamma_06/alfa_m08 to keep duet cues localized."
+      }
+    },
+    {
+      "id": "Alfa-M09",
+      "path": "production/mass_alfa_batch2/alfa_m09",
+      "exchange_slot": "genesis-epsilon",
+      "focus": "Lore steady-state while music layer spins up",
+      "status": "seeded/pending hydration",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m09/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m09/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M09-20251119T133833Z.json",
+      "hydration": {
+        "status": "pending",
+        "workspace": null,
+        "order_id": null,
+        "notes": "Clone to golf_06/epsilon_01/alfa_m09; keep lore deck primary until music evidence lands."
+      }
+    },
+    {
+      "id": "Alfa-M10",
+      "path": "production/mass_alfa_batch2/alfa_m10",
+      "exchange_slot": "genesis-eta",
+      "focus": "Lore-only anchor for escalation briefings",
+      "status": "seeded/pending hydration",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m10/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m10/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M10-20251119T133833Z.json",
+      "hydration": {
+        "status": "pending",
+        "workspace": null,
+        "order_id": null,
+        "notes": "Install at golf_06/eta_07/alfa_m10; keep escalation briefings documented as part of readiness."
+      }
+    },
+    {
+      "id": "Alfa-M11",
+      "path": "production/mass_alfa_batch2/alfa_m11",
+      "exchange_slot": "genesis-iota",
+      "focus": "Layer-stacked cadence once cooldown is under control",
+      "status": "seeded/pending hydration",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m11/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m11/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M11-20251119T133833Z.json",
+      "hydration": {
+        "status": "pending",
+        "workspace": null,
+        "order_id": null,
+        "notes": "Planned slot: golf_07/iota_05/alfa_m11 with layered telemetry guards."
+      }
+    }
+  ]
+}
