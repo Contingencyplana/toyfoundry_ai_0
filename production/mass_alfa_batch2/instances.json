@@ -8,15 +8,16 @@
       "path": "production/mass_alfa_batch2/alfa_m06",
       "exchange_slot": "genesis-alpha",
       "focus": "Lore-first intake rail for new recruits",
-      "status": "seeded/pending hydration",
+      "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m06/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m06/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M06-20251119T133833Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M06-20251120T005726Z.json",
       "hydration": {
-        "status": "pending",
-        "workspace": null,
-        "order_id": null,
-        "notes": "Clone into golf_04/alpha_04/alfa_m06 once the assigned genesis workspace pulls the baseline."
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-20T00:57:26Z",
+        "notes": "Hydrated in golf_04/alpha_04/alfa_m06; readiness + smoke rerun before hello export."
       }
     },
     {
@@ -24,15 +25,16 @@
       "path": "production/mass_alfa_batch2/alfa_m07",
       "exchange_slot": "genesis-beta",
       "focus": "Music overlay for call-and-response acceleration",
-      "status": "seeded/pending hydration",
+      "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m07/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m07/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M07-20251119T133833Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M07-20251120T010017Z.json",
       "hydration": {
-        "status": "pending",
-        "workspace": null,
-        "order_id": null,
-        "notes": "Target golf_05/beta_02/alfa_m07 with music overlay hooks toggled on."
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-20T01:00:17Z",
+        "notes": "Hydrated under golf_05/beta_02/alfa_m07 with call-and-response overlay capture."
       }
     },
     {
@@ -40,15 +42,16 @@
       "path": "production/mass_alfa_batch2/alfa_m08",
       "exchange_slot": "genesis-gamma",
       "focus": "Music cue for squad synchronization",
-      "status": "seeded/pending hydration",
+      "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m08/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m08/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M08-20251119T133833Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M08-20251120T010439Z.json",
       "hydration": {
-        "status": "pending",
-        "workspace": null,
-        "order_id": null,
-        "notes": "Hydrate under golf_05/gamma_06/alfa_m08 to keep duet cues localized."
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-20T01:04:39Z",
+        "notes": "Hydrated under golf_05/gamma_06/alfa_m08 with squad-sync cues captured."
       }
     },
     {
@@ -56,15 +59,16 @@
       "path": "production/mass_alfa_batch2/alfa_m09",
       "exchange_slot": "genesis-epsilon",
       "focus": "Lore steady-state while music layer spins up",
-      "status": "seeded/pending hydration",
+      "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m09/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m09/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M09-20251119T133833Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M09-20251120T010557Z.json",
       "hydration": {
-        "status": "pending",
-        "workspace": null,
-        "order_id": null,
-        "notes": "Clone to golf_06/epsilon_01/alfa_m09; keep lore deck primary until music evidence lands."
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-20T01:05:57Z",
+        "notes": "Hydrated at golf_06/epsilon_01/alfa_m09 keeping lore deck primary."
       }
     },
     {
@@ -72,15 +76,16 @@
       "path": "production/mass_alfa_batch2/alfa_m10",
       "exchange_slot": "genesis-eta",
       "focus": "Lore-only anchor for escalation briefings",
-      "status": "seeded/pending hydration",
+      "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m10/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m10/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M10-20251119T133833Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M10-20251120T010741Z.json",
       "hydration": {
-        "status": "pending",
-        "workspace": null,
-        "order_id": null,
-        "notes": "Install at golf_06/eta_07/alfa_m10; keep escalation briefings documented as part of readiness."
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-20T01:07:41Z",
+        "notes": "Hydrated at golf_06/eta_07/alfa_m10 capturing escalation briefing notes."
       }
     },
     {
@@ -88,15 +93,16 @@
       "path": "production/mass_alfa_batch2/alfa_m11",
       "exchange_slot": "genesis-iota",
       "focus": "Layer-stacked cadence once cooldown is under control",
-      "status": "seeded/pending hydration",
+      "status": "hydrated",
       "readiness_log": "production/mass_alfa_batch2/alfa_m11/logs/readiness.json",
       "smoke_log": "production/mass_alfa_batch2/alfa_m11/logs/smoke.txt",
-      "hello_report": "outbox/reports/hello-Alfa-M11-20251119T133833Z.json",
+      "hello_report": "outbox/reports/hello-Alfa-M11-20251120T010909Z.json",
       "hydration": {
-        "status": "pending",
-        "workspace": null,
-        "order_id": null,
-        "notes": "Planned slot: golf_07/iota_05/alfa_m11 with layered telemetry guards."
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-20T01:09:09Z",
+        "notes": "Hydrated at golf_07/iota_05/alfa_m11 with layered telemetry guards."
       }
     }
   ]
