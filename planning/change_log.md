@@ -2,6 +2,10 @@
 
 All notable updates to the High Command AI workspace are documented here. Entries reference corresponding orders and ledger notes.
 
+## 2025-11-20
+
+- **Daily Doc Refresh — README.md** — Captured Batch 2 (order-2025-11-19-060) hydration completion, Offline Continuity Mode posture, and exchange telemetry notes so High Command has a current readiness snapshot before the next trooptrain sync.
+
 ## 2025-10-12
 
 - **Order 2025-10-12-001** — Issued first exchange directive; toysoldiers_ai_0 stood up receiver, produced ack/report, and order closed in ledger.
