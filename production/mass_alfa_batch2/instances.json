@@ -4,6 +4,23 @@
   "rank_set": "Genesis Alpha–Iota (Batch 2)",
   "instances": [
     {
+      "id": "Alfa-M04",
+      "path": "production/mass_alfa_batch2/alfa_m04",
+      "exchange_slot": "genesis-kappa",
+      "focus": "Comfort overlay instrumentation with independent music rails",
+      "status": "hydrated",
+      "readiness_log": "production/mass_alfa_batch2/alfa_m04/logs/readiness.json",
+      "smoke_log": "production/mass_alfa_batch2/alfa_m04/logs/smoke.txt",
+      "hello_report": "outbox/reports/hello-Alfa-M04-20251121T054012Z.json",
+      "hydration": {
+        "status": "completed",
+        "workspace": "toyfoundry_ai_0",
+        "order_id": "order-2025-11-19-060",
+        "timestamp_utc": "2025-11-21T05:32:18Z",
+        "notes": "Hydrated into golf_03/kappa_04/alfa_m04 with comfort overlay toggles and music independence hooks."
+      }
+    },
+    {
       "id": "Alfa-M06",
       "path": "production/mass_alfa_batch2/alfa_m06",
       "exchange_slot": "genesis-alpha",
