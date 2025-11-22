@@ -14,3 +14,13 @@ Next steps
 1. Clone the baseline into `golf_04/alpha_04/alfa_m06`, wiring the recruit briefing scripts referenced in frontline feedback (`genesis-alpha`).
 2. Re-run readiness + smoke inside the hydrated workspace and attach lore deck diffs before filing hello.
 3. Export the hello report with lore evidence and ledger reference once hydration clears hub review.
+
+
+High Command hydration (2025-11-22)
+
+- Slot: `golf_04/alpha_04/alfa_m06`
+- Ops readiness: `logs/mass_alfa_batch2/Alfa-M06/ops_readiness.json`
+- Smoke (exchange_all): `logs/mass_alfa_batch2/Alfa-M06/smoke.txt`
+- Exchange log: `logs/mass_alfa_batch2/Alfa-M06/exchange_all.json`
+- Telemetry stub: `production/mass_alfa_batch2/alfa_m06/telemetry.json`
+- Hello report: `outbox/reports/hello-Alfa-M06-20251122T034501Z.json`

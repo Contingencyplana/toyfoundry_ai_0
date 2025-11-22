@@ -1,0 +1,12 @@
+{
+  "instance_id": "Alfa-M08",
+  "order_id": "order-2025-11-19-060",
+  "baseline_tag": "forge-alfa@2025-11-19-060",
+  "workspace": "high_command_ai_0",
+  "slot_path": "golf_05/gamma_06/alfa_m08",
+  "hello_report": "outbox/reports/hello-Alfa-M08-20251122T034503Z.json",
+  "exchange_log": "logs/mass_alfa_batch2/Alfa-M08/exchange_all.json",
+  "created_at": "2025-11-22T03:47:00Z",
+  "status": "stub",
+  "notes": "Telemetry stub seeded during High Command hydration; wire downstream metrics after hub pull."
+}

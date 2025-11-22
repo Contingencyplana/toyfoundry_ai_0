@@ -14,3 +14,13 @@ Next steps
 1. Materialize `golf_05/gamma_06/alfa_m08` and thread the duet cue timing captured in Nightlands telemetry.
 2. Execute readiness/smoke with the sync cue enabled and log any latency notes.
 3. File hello + readiness evidence referencing the gamma targeted sync run.
+
+
+High Command hydration (2025-11-22)
+
+- Slot: `golf_05/gamma_06/alfa_m08`
+- Ops readiness: `logs/mass_alfa_batch2/Alfa-M08/ops_readiness.json`
+- Smoke (exchange_all): `logs/mass_alfa_batch2/Alfa-M08/smoke.txt`
+- Exchange log: `logs/mass_alfa_batch2/Alfa-M08/exchange_all.json`
+- Telemetry stub: `production/mass_alfa_batch2/alfa_m08/telemetry.json`
+- Hello report: `outbox/reports/hello-Alfa-M08-20251122T034503Z.json`

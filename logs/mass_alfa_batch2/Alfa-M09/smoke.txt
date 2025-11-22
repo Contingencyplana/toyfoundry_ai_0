@@ -1,0 +1,5 @@
+python tools/exchange_all.py
+hub_path: C:\Users\Admin\high_command_exchange
+reports copied: hello-Alfa-M04-20251122T034500Z.json, hello-Alfa-M06-20251122T034501Z.json, hello-Alfa-M07-20251122T034502Z.json, hello-Alfa-M08-20251122T034503Z.json, hello-Alfa-M09-20251122T034504Z.json, hello-Alfa-M10-20251122T034505Z.json, hello-Alfa-M11-20251122T034506Z.json, order-2025-11-19-060-report.json
+acks copied: order-2025-11-19-060-ack.json
+factory_order_emitter.py missing; smoke run uses exchange_all.py

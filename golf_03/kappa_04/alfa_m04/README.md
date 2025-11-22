@@ -16,3 +16,13 @@ Next steps
 1. Clone the baseline into `golf_03/kappa_04/alfa_m04`, enabling independent music overlays for scouting missions.
 2. Re-run readiness + smoke inside the hydrated workspace and attach comfort-metric deltas before filing hello.
 3. Ship the hello packet with telemetry pointers once Toysoldiers validates the rerun evidence.
+
+
+High Command hydration (2025-11-22)
+
+- Slot: `golf_03/kappa_04/alfa_m04`
+- Ops readiness: `logs/mass_alfa_batch2/Alfa-M04/ops_readiness.json`
+- Smoke (exchange_all): `logs/mass_alfa_batch2/Alfa-M04/smoke.txt`
+- Exchange log: `logs/mass_alfa_batch2/Alfa-M04/exchange_all.json`
+- Telemetry stub: `production/mass_alfa_batch2/alfa_m04/telemetry.json`
+- Hello report: `outbox/reports/hello-Alfa-M04-20251122T034500Z.json`

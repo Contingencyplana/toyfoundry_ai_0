@@ -3,13 +3,14 @@
   "order_id": "order-2025-11-19-060",
   "baseline_tag": "forge-alfa@2025-11-19-060",
   "hydration_path": "golf_05/gamma_06/alfa_m08",
-  "readiness_log": "../../../logs/ops_readiness.json",
-  "timestamp_utc": "2025-11-20T01:04:39.269528+00:00",
+  "readiness_log": "../../../logs/mass_alfa_batch2/Alfa-M08/ops_readiness.json",
+  "timestamp_utc": "2025-11-22T03:47:39.000000+00:00",
   "status": "ok",
-  "notes": "Hydrated into gamma squad-sync overlay; readiness rerun before hello export.",
+  "notes": "High Command hydration (2025-11-22) at golf_05/gamma_06/alfa_m08; ops readiness rerun, smoke via tools/exchange_all.py (factory_order_emitter.py missing); hello refreshed to High Command IDs.",
   "evidence": {
     "ops_readiness_script": "python tools/ops_readiness.py",
-    "smoke_command": "python ../../../tools/factory_order_emitter.py --help",
-    "smoke_log": "logs/smoke.txt"
+    "smoke_command": "python tools/exchange_all.py",
+    "smoke_log": "../../../logs/mass_alfa_batch2/Alfa-M08/smoke.txt",
+    "exchange_log": "../../../logs/mass_alfa_batch2/Alfa-M08/exchange_all.json"
   }
 }

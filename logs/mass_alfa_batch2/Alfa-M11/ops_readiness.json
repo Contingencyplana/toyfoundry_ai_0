@@ -1,0 +1,164 @@
+{
+  "timestamp_utc": "2025-11-22T03:47:00Z",
+  "workspace": "high_command_ai_0",
+  "python": "3.12.6",
+  "hub_path": "C:\\Users\\Admin\\high_command_exchange",
+  "hub_exists": true,
+  "docs_present": {
+    "C:\\Users\\Admin\\toyfoundry_ai_0\\RUNBOOK.md": true
+  },
+  "staged_checks": [
+    {
+      "kind": "order",
+      "file": "order-2025-11-13-902.json",
+      "missing": []
+    },
+    {
+      "kind": "ack",
+      "file": "order-2025-11-13-054-ack.json",
+      "missing": []
+    },
+    {
+      "kind": "ack",
+      "file": "order-2025-11-13-902-ack.json",
+      "missing": []
+    },
+    {
+      "kind": "ack",
+      "file": "order-2025-11-19-060-ack.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M01-20251113T182415Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M02-20251113T182415Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M03-20251113T182415Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M04-20251113T182415Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M05-20251113T182415Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M06-20251119T133833Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M06-20251120T005726Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M07-20251119T133833Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M07-20251120T010017Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M08-20251119T133833Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M08-20251120T010439Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M09-20251119T133833Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M09-20251120T010557Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M10-20251119T133833Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M10-20251120T010741Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M11-20251119T133833Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "order-2025-11-13-054-report.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "order-2025-11-13-902-report.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "order-2025-11-19-060-report.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M04-20251122T034500Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M06-20251122T034501Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M07-20251122T034502Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M08-20251122T034503Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M09-20251122T034504Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M10-20251122T034505Z.json",
+      "missing": []
+    },
+    {
+      "kind": "report",
+      "file": "hello-Alfa-M11-20251122T034506Z.json",
+      "missing": []
+    }
+  ],
+  "ok": true,
+  "instance_id": "Alfa-M11"
+}

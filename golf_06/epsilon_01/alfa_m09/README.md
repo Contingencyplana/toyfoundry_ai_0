@@ -14,3 +14,13 @@ Next steps
 1. Clone into `golf_06/epsilon_01/alfa_m09`, keeping lore panels primary per epsilon feedback.
 2. Add hooks/placeholders for future music overlays but ship the lore-only hello immediately after readiness reruns.
 3. Tag ledger + telemetry once epsilon upgrades the music stack so Toyfoundry can refresh the manifest.
+
+
+High Command hydration (2025-11-22)
+
+- Slot: `golf_06/epsilon_01/alfa_m09`
+- Ops readiness: `logs/mass_alfa_batch2/Alfa-M09/ops_readiness.json`
+- Smoke (exchange_all): `logs/mass_alfa_batch2/Alfa-M09/smoke.txt`
+- Exchange log: `logs/mass_alfa_batch2/Alfa-M09/exchange_all.json`
+- Telemetry stub: `production/mass_alfa_batch2/alfa_m09/telemetry.json`
+- Hello report: `outbox/reports/hello-Alfa-M09-20251122T034504Z.json`
