@@ -45,7 +45,7 @@ def sync_local(workspace_root: str):
         else:
             print(f"[OK] Synced {files_copied} {name} file(s) to {dst}")
 
-    print("✅ Local exchange sync complete.")
+    print("[OK] Local exchange sync complete.")
 
 
 if __name__ == "__main__":

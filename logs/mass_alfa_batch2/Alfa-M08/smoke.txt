@@ -1,5 +1,32 @@
-python tools/exchange_all.py
-hub_path: C:\Users\Admin\high_command_exchange
-reports copied: hello-Alfa-M04-20251122T034500Z.json, hello-Alfa-M06-20251122T034501Z.json, hello-Alfa-M07-20251122T034502Z.json, hello-Alfa-M08-20251122T034503Z.json, hello-Alfa-M09-20251122T034504Z.json, hello-Alfa-M10-20251122T034505Z.json, hello-Alfa-M11-20251122T034506Z.json, order-2025-11-19-060-report.json
-acks copied: order-2025-11-19-060-ack.json
-factory_order_emitter.py missing; smoke run uses exchange_all.py
+usage: factory_order_emitter.py [-h] --order-id ORDER_ID
+                                [--issued-by ISSUED_BY] [--target TARGET]
+                                [--priority PRIORITY] [--timestamp TIMESTAMP]
+                                [--summary SUMMARY] [--narrator NARRATOR]
+                                [--extra-field KEY=VALUE] [--dry-run]
+                                translator_payload destination
+
+Promote translator payloads into factory-order@1.0 documents
+
+positional arguments:
+  translator_payload    Path to the translator spike output JSON
+  destination           Where to write the resulting factory-order JSON
+
+options:
+  -h, --help            show this help message and exit
+  --order-id ORDER_ID   Factory order identifier (e.g. order-2025-10-26-001)
+  --issued-by ISSUED_BY
+                        ID of the issuing workspace
+  --target TARGET       Factory order target workspace
+  --priority PRIORITY   Order priority flag
+  --timestamp TIMESTAMP
+                        ISO-8601 timestamp for the order (defaults to current
+                        UTC time)
+  --summary SUMMARY     Optional override for the lore-facing summary (must
+                        match narration if provided)
+  --narrator NARRATOR   Optional War Office narrator persona to embed in
+                        metadata
+  --extra-field KEY=VALUE
+                        Inject additional top-level fields (e.g. --extra-field
+                        attachments=[])
+  --dry-run             Validate and preview payload without writing the
+                        destination file

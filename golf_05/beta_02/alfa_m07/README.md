@@ -20,7 +20,7 @@ High Command hydration (2025-11-22)
 
 - Slot: `golf_05/beta_02/alfa_m07`
 - Ops readiness: `logs/mass_alfa_batch2/Alfa-M07/ops_readiness.json`
-- Smoke (exchange_all): `logs/mass_alfa_batch2/Alfa-M07/smoke.txt`
+- Smoke (factory_order_emitter.py --help): `logs/mass_alfa_batch2/Alfa-M07/smoke.txt`
 - Exchange log: `logs/mass_alfa_batch2/Alfa-M07/exchange_all.json`
 - Telemetry stub: `production/mass_alfa_batch2/alfa_m07/telemetry.json`
 - Hello report: `outbox/reports/hello-Alfa-M07-20251122T034502Z.json`
