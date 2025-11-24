@@ -1,0 +1,72 @@
+{
+  "schema": "emoji-runtime@1.0",
+  "summary": "M1 Nightlands co-op core loop prototype with thin HUD and guardrailed emoji inputs.",
+  "timestamp": "2025-11-24T07:58:00Z",
+  "glyph_chain": ["🛡️", "✨", "⚔️", "🌑", "👻", "💀", "💊", "🚪", "🔁"],
+  "intent": {
+    "loop_id": "campaign1-m1-nightlands",
+    "objective": "Survive two waves and extract once; single extraction win.",
+    "roles": [
+      {
+        "id": "sentinel",
+        "emoji": "🛡️",
+        "signature": "🛡️✨",
+        "description": "Shield pulse to peel wraiths; routed through emoji DSL/guardrails."
+      },
+      {
+        "id": "caster",
+        "emoji": "✨",
+        "signature": "✨🌑",
+        "description": "Void tether to slow husks; routed through emoji DSL/guardrails."
+      }
+    ],
+    "enemies": [
+      {
+        "id": "wraith",
+        "emoji": "👻",
+        "behavior": "Dash to backline; weak to 🛡️✨."
+      },
+      {
+        "id": "husk",
+        "emoji": "💀",
+        "behavior": "Slow melee; weak to ✨🌑."
+      }
+    ],
+    "hud": {
+      "time_to_fun_ms": "capture first ability cast delta",
+      "revive_ms": "capture down->revive delta per player",
+      "one_more_accept": "boolean after extraction prompt"
+    },
+    "guardrails": {
+      "input_mode": "emoji_dsl_only",
+      "filters": ["no free text", "template-bound commands"]
+    }
+  },
+  "telemetry_stub": {
+    "batch_id": "order-2025-11-23-060-m1",
+    "ritual": "core_loop_prototype",
+    "units_processed": 1,
+    "status": "draft",
+    "duration_ms": 0
+  },
+  "narration": {
+    "line": "Nightlands co-op probe",
+    "beats": [
+      "role select",
+      "wave 1",
+      "wave 2",
+      "extraction",
+      "one more run?"
+    ]
+  },
+  "directives": [
+    "role_select_fast",
+    "route_signature_abilities_via_emoji_dsl",
+    "thin_ui_hud_ttf_revive_prompt"
+  ],
+  "outcomes": [
+    "prototype_slice_ready",
+    "ready_for_playtest_logging"
+  ],
+  "template": "nightlands_duet_v1"
+}
