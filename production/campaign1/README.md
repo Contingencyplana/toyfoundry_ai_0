@@ -17,6 +17,10 @@ This slice captures the M1 Nightlands co-op loop with quick role select, 1–2 e
 
 ## Evidence Stub
 - `production/campaign1/m1_core_loop_prototype.json` (emoji-runtime@1.0) captures the loop intent and HUD hooks; promotable via `python tools/emoji_runtime_promoter.py production/campaign1/m1_core_loop_prototype.json exchange/orders/outbox/emoji_runtime_promoted/order-2025-11-23-060-m1.json`.
+- `tools/campaign1_playtest_stub.py` emits a stub playtest log with HUD metrics and emoji events.
+- `tools/campaign1_hud_telemetry.py` computes HUD metrics + guardrail checks from a playtest log.
+- `tools/campaign1_hud_sim.py` generates a thin-UI playtest log with configurable timings (TTF, revive, extraction, one-more-run).
+- `tools/campaign1_ui_runner.py` is the thin-UI runner that emits emoji-only events and HUD metrics for live runs; feed its output into `campaign1_hud_telemetry.py` for reports.
 
 ## Next Implementation Steps
 - Wire the HUD counters into the thin UI and emit telemetry to `logs/order-2025-11-23-060-m1-playtest.jsonl`.
